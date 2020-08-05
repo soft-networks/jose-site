@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Intro",
+    "slug": "/intro/",
+    "images": [
+      "./images/intro/1.png",
+      "./images/intro/2.png",
+      "./images/intro/3.png"
+    ],
+    "thumb": "./images/intro/1.png"
+  },
+  {
+    "name": "Love song 1",
+    "slug": "/love-1/",
+    "images": ["./images/love-1/1.png", "./images/love-1/2.png"],
+    "thumb": "./images/love-1/1.png"
+  }
+]
