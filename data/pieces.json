@@ -1,18 +1,36 @@
 [
   {
-    "name": "Intro",
+    "name": "hola mi nombre es jose miguel",
     "slug": "/intro/",
     "images": [
       "./images/intro/1.png",
       "./images/intro/2.png",
       "./images/intro/3.png"
     ],
-    "thumb": "./images/intro/1.png"
+    "thumb": "./images/intro/thumb.png"
   },
   {
-    "name": "Love song 1",
-    "slug": "/love-1/",
-    "images": ["./images/love-1/1.png", "./images/love-1/2.png"],
-    "thumb": "./images/love-1/1.png"
+    "name": "porque esta vida",
+    "slug": "/song-1/",
+    "images": ["./images/song-1/1.png", "./images/song-1/2.png"],
+    "thumb": "./images/song-1/thumb.png"
+  },
+  {
+    "name": "love song",
+    "slug": "/song-2/",
+    "images": ["./images/song-2/1.png", "./images/song-2/2.png"],
+    "thumb": "./images/song-2/thumb.png"
+  },
+  {
+    "name": "love song",
+    "slug": "/song-2/",
+    "images": ["./images/song-2/1.png", "./images/song-2/2.png"],
+    "thumb": "./images/song-2/thumb.png"
+  },
+  {
+    "name": "love song",
+    "slug": "/song-2/",
+    "images": ["./images/song-2/1.png", "./images/song-2/2.png"],
+    "thumb": "./images/song-2/thumb.png"
   }
 ]

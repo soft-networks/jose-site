@@ -1,16 +1,95 @@
-body {
-  background: rgb(180, 250, 180);
-  padding: 24px;
-}
-.title {
+/* Reset */
+html,
+body,
+.all-container,
+#___gatsby,
+#gatsby-focus-wrapper {
   width: 100%;
-  margin-bottom: 12px;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
 }
 
-.piece-preview {
-  padding: 12px;
-  border: 1px solid gray;
-  display: inline-block;
-  margin-right: 24px;
-  background: white;
+:root {
+  --blue: rgb(0, 150, 255);
+  --yellow: rgb(255, 255, 90);
+  --white: rgba(255, 255, 255, 1);
+}
+
+.content-container {
+  width: 100%;
+  padding-left: 12px;
+  padding-right: 12px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* TODO This is just bad, there are better ways to do a cgrid */
+.content-container.flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.content-container.flex .half {
+  flex: 1;
+
+  width: calc(50% - 8px);
+  min-width: calc(50% - 8px);
+  max-width: calc(50% - 8px);
+}
+
+.content-container.flex .half:nth-child(2n) {
+  margin-left: 16px;
+}
+
+a,
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+#home-container {
+  height: 100%;
+  background: var(--blue);
+}
+
+#about-container {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  background: var(--white);
+  font-size: 16px;
+  line-height: 20px;
+}
+
+/* Phone portrait */
+@media only screen and (max-width: 800px) {
+  .content-container {
+    padding-left: 24px;
+    padding-right: 24px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  /* Mobile related CSS goes here (400px and under) */
+  .content-container.flex .half {
+    flex: 1;
+
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+  }
+
+  #about-container {
+    padding-bottom: 12px;
+  }
+
+  #about-container .content-container.flex {
+    display: block;
+  }
+  #about-container .content-container.flex .half {
+    display: inline;
+  }
 }

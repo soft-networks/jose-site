@@ -1,0 +1,84 @@
+#preview-container {
+  padding-top: 72px;
+  background: linear-gradient(var(--white), var(--blue));
+}
+
+/* Specic to preview */
+
+.piece-preview {
+  margin-bottom: 32px;
+  position: relative;
+}
+
+.piece-preview .preview-content {
+  width: 100%;
+  position: relative;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  text-align: center;
+
+  animation: shrink 1s forwards;
+}
+
+.preview-content .name {
+  font-size: 14px;
+}
+
+.piece-preview .preview-content:hover {
+  animation: grow 1s forwards;
+}
+
+/* TODO: MOVE THIS TO JAVASCRIPT BOSS! */
+.piece-preview:nth-child(2n) {
+  left: 5%;
+}
+
+.piece-preview:nth-child(3n) {
+  left: -5%;
+}
+
+@keyframes grow {
+  0% {
+    width: 100%;
+    transform: translate(0px, 0px);
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+
+  100% {
+    width: calc(100% + 24px);
+    transform: translate(-12px, -12px);
+    padding-top: 0px;
+    padding-bottom: 0x;
+  }
+}
+
+@keyframes shrink {
+  0% {
+    width: calc(100% + 24px);
+    transform: translate(-12px, -12px);
+    padding-top: 0px;
+    padding-bottom: 0x;
+  }
+
+  100% {
+    width: 100%;
+    transform: translate(0px, 0px);
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .content-container.flex .half:nth-child(2n) {
+    margin-left: 0px;
+  }
+
+  .piece-preview:nth-child(2n) {
+    left: 0%;
+  }
+
+  .piece-preview:nth-child(3n) {
+    left: 0%;
+  }
+}

@@ -1,0 +1,20 @@
+.responseBanner {
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  background: var(--yellow);
+  font-size: 16px;
+  padding-top: 12px;
+  padding-bottom: 16px;
+  box-shadow: 0px 0px 12px 10px var(--yellow);
+  font-family: Helvetica, sans-serif;
+}
+
+/* TODO: change these obviously.. */
+.add {
+  float: left;
+}
+
+.see {
+  float: right;
+}

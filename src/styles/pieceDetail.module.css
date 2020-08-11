@@ -1,0 +1,23 @@
+:root {
+  --blue: rgb(0, 150, 255);
+}
+.detailContainer {
+  background: linear-gradient(rgb(0, 150, 255), rgba(80, 200, 255));
+}
+
+.header {
+  text-align: center;
+  font-size: 26px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.images {
+  margin-top: 12px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.image {
+  margin-bottom: 12px;
+}

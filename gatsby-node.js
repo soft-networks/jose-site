@@ -21,7 +21,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   //Now go through every piece, and create a page for Each piece using the pieceDetail component
   const pieces = result.data.allPiecesJson.edges
-  const pieceDetail = require.resolve(`./src/templates/piece.js`)
+  const pieceDetail = require.resolve(`./src/templates/pieceDetail.js`)
   pieces.forEach(({ node }) => {
     let slug = node.slug
     console.log("Tryna create page for: " + slug)
