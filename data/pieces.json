@@ -7,12 +7,16 @@
       "./images/intro/2.png",
       "./images/intro/3.png"
     ],
-    "thumb": "./images/intro/thumb.png"
+    "date": "August 24th, 2020",
+    "translation": "./images/intro/translation.md",
+    "thumb": "./images/intro/thumb.png",
+    "audio": "./images/intro/audio.m4a"
   },
   {
     "name": "porque esta vida",
     "slug": "/song-1/",
     "images": ["./images/song-1/1.png", "./images/song-1/2.png"],
+    "date": "August 24th, 2020",
     "thumb": "./images/song-1/thumb.png"
   },
   {

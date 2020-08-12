@@ -19,6 +19,15 @@ export const query = graphql`
     piecesJson(slug: { eq: $slug }) {
       name
       id
+      date
+      audio {
+        publicURL
+      }
+      translation {
+        childMarkdownRemark {
+          html
+        }
+      }
       images {
         childImageSharp {
           fluid {
@@ -34,9 +43,23 @@ export default function PieceTemplate({ data }) {
   const pieceData = data.piecesJson
   const title = pieceData.name
   const id = pieceData.id
+  const date = pieceData.date
+  const audioURL = pieceData.audio ? pieceData.audio.publicURL : undefined
   const imagesFluidData = pieceData.images
     ? pieceData.images.map(image => image.childImageSharp.fluid)
     : false
 
-  return <Piece pieceName={title} imagesFluidData={imagesFluidData}></Piece>
+  const translationHTMLData = pieceData.translation
+    ? pieceData.translation.childMarkdownRemark.html
+    : false
+
+  return (
+    <Piece
+      pieceName={title}
+      date={date}
+      imagesFluidData={imagesFluidData}
+      translationHTML={translationHTMLData}
+      audioURL={audioURL}
+    ></Piece>
+  )
 }

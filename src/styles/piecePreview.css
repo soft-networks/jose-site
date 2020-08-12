@@ -13,18 +13,19 @@
 .piece-preview .preview-content {
   width: 100%;
   position: relative;
-  padding-top: 6px;
-  padding-bottom: 6px;
   text-align: center;
 
   animation: shrink 1s forwards;
+  --animGrowth: 12px;
+  padding-top: calc(var(--animGrowth) / 4);
+  padding-bottom: calc(var(--animGrowth) / 4);
 }
 
 .preview-content .name {
   font-size: 14px;
 }
 
-.piece-preview .preview-content:hover {
+.piece-preview:hover .preview-content {
   animation: grow 1s forwards;
 }
 
@@ -41,13 +42,16 @@
   0% {
     width: 100%;
     transform: translate(0px, 0px);
-    padding-top: 6px;
-    padding-bottom: 6px;
+    padding-top: calc(var(--animGrowth) / 4);
+    padding-bottom: calc(var(--animGrowth) / 4);
   }
 
   100% {
-    width: calc(100% + 24px);
-    transform: translate(-12px, -12px);
+    width: calc(100% + var(--animGrowth));
+    transform: translate(
+      calc(-0.5 * var(--animGrowth)),
+      calc(-0.5 * var(--animGrowth))
+    );
     padding-top: 0px;
     padding-bottom: 0x;
   }
@@ -55,8 +59,11 @@
 
 @keyframes shrink {
   0% {
-    width: calc(100% + 24px);
-    transform: translate(-12px, -12px);
+    width: calc(100% + var(--animGrowth));
+    transform: translate(
+      calc(-0.5 * var(--animGrowth)),
+      calc(-0.5 * var(--animGrowth))
+    );
     padding-top: 0px;
     padding-bottom: 0x;
   }
@@ -64,8 +71,8 @@
   100% {
     width: 100%;
     transform: translate(0px, 0px);
-    padding-top: 6px;
-    padding-bottom: 6px;
+    padding-top: calc(var(--animGrowth) / 4);
+    padding-bottom: calc(var(--animGrowth) / 4);
   }
 }
 

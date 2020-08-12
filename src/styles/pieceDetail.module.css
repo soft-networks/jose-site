@@ -2,20 +2,42 @@
   --blue: rgb(0, 150, 255);
 }
 .detailContainer {
-  background: linear-gradient(rgb(0, 150, 255), rgba(80, 200, 255));
+  background: linear-gradient(
+    rgb(222 233 255) 0%,
+    #82d2ff 30%,
+    rgb(0, 150, 255) 100%
+  );
 }
 
 .header {
   text-align: center;
-  font-size: 26px;
-  padding-top: 24px;
+  font-size: 24px;
+  padding-top: 48px;
   padding-bottom: 24px;
+}
+
+.subheader {
+  font-size: 18px;
 }
 
 .images {
   margin-top: 12px;
   width: 80%;
   margin: 0 auto;
+}
+
+.audio {
+  width: 60%;
+  height: 48px;
+  margin: 0 auto;
+  margin-bottom: 56px;
+}
+
+.translation {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 18px;
 }
 
 .image {
