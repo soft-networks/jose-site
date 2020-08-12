@@ -2,8 +2,7 @@ import React from "react"
 import CoreLayout from "../layouts/coreLayout"
 import AllPiecePreview from "../components/pieces/allPiecePreview"
 
-export default function Home({ data }) {
-  console.log(data)
+export default function Home() {
   return (
     <CoreLayout>
       <div id="home-container">

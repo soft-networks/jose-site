@@ -4,8 +4,6 @@ import LinkedElement from "../linkedElement"
 
 export default function PiecePreview(props) {
   function renderImageIfExists() {
-    console.log("Checking image 4: " + props.pieceName)
-    console.log(props.pieceImageUrl)
     if (props.pieceImageData) {
       return (
         <LinkedElement elementClass="thumb" linkTo={props.pieceUrl}>

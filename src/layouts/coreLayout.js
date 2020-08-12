@@ -1,5 +1,5 @@
 import React from "react"
-import ResponseBanner from "../components/responseBanner"
+import ResponseBanner from "../components/responses/responseBanner"
 
 export default function CoreLayout({ children }) {
   return (
