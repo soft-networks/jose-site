@@ -89,7 +89,13 @@ function ResponsePreview({ author, response }) {
       onMouseOver={() => {
         setAnimPlaying(false)
       }}
+      onFocus={() => {
+        setAnimPlaying(false)
+      }}
       onMouseOut={() => {
+        setAnimPlaying(true)
+      }}
+      onBlur={() => {
         setAnimPlaying(true)
       }}
     >
