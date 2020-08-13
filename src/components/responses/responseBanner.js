@@ -1,6 +1,6 @@
 import React from "react"
 import responseStyles from "../../styles/response.module.css"
-import ResponsePreviews from "./responsePreviews"
+import AllResponsePreviews from "./allResponsePreviews"
 
 //Eventually this will get its own data source
 export default function ResponseBanner() {
@@ -10,7 +10,7 @@ export default function ResponseBanner() {
         <div className={responseStyles.add}>Add a response</div>
         <div className={responseStyles.see}>See responses</div>
       </div>
-      <ResponsePreviews></ResponsePreviews>
+      <AllResponsePreviews></AllResponsePreviews>
     </div>
   )
 }
