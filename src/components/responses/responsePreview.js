@@ -8,7 +8,7 @@ export default function ResponsePreview({ author, response, randomLeftPos }) {
   const animLength = 100
 
   useEffect(() => {
-    if (bottomPos < 100 && animPlaying) {
+    if (bottomPos < 110 && animPlaying) {
       const interval_ID = setInterval(() => {
         setBottomPos(bottomPos => bottomPos + 1)
       }, animLength)

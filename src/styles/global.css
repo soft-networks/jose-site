@@ -37,9 +37,10 @@ body,
 }
 
 .secondary-container.expanded {
-  flex: 1 1;
+  flex: 1;
   height: 100%;
   width: 30vw;
+  border-right: 1px solid black;
 }
 
 .content-container {
@@ -82,6 +83,17 @@ a:visited {
 
 #home-container {
   background: linear-gradient(var(--white) 10%, var(--blue) 100%);
+}
+
+@media only screen and (max-width: 1000px) {
+  .secondary-container.expanded {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    border-right: none;
+    box-sizing: border-box;
+  }
 }
 
 /* Phone portrait */

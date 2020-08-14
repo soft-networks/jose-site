@@ -22,7 +22,7 @@ export default function ResponseBanner() {
               setAddResponseOpen(addResponseOpen => !addResponseOpen)
             }
           >
-            Add a response
+            {addResponseOpen ? "close" : "Add a response"}
           </div>
           <LinkedElement
             elementClass={`${responseStyles.see} ${responseStyles.button}`}

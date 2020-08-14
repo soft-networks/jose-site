@@ -1,11 +1,48 @@
+/* TODO: MOVE THIS TO A BETTER PLACE LMAO */
+.responseDetailContainer,
+.addResponse {
+  padding-top: 32px;
+  height: 100%;
+  background-image: linear-gradient(var(--yellow) 0%, var(--lightYellow) 20%);
+}
+
+.addResponse {
+  padding: 32px;
+}
+
+.responseInput {
+  width: 100%;
+  margin-top: 12px;
+}
+
+.responseInput input,
+.responseInput textarea {
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding: 12px;
+  box-sizing: border-box;
+  color: black;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.responseDetailContainer .content-container.flex .half.response-about {
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  height: 20%;
+  min-height: 20%;
+}
+
 .responseBanner {
   width: 100%;
   position: fixed;
   bottom: 0px;
   font-size: 14px;
-
-  font-family: Helvetica, sans-serif;
   padding-bottom: 32px;
+  z-index: 2;
 }
 
 .button,
@@ -39,7 +76,6 @@
 .responsePreview,
 .responseDetail {
   font-size: 16px;
-  line-height: 18px;
 }
 .responsePreview {
   position: fixed;
@@ -54,23 +90,7 @@
 
 .responsePreview .author::before,
 .responseDetail .author::before {
-  content: "from";
-}
-
-/* TODO: MOVE THIS TO A BETTER PLACE LMAO */
-.responseDetailContainer,
-.addResponse {
-  padding-top: 32px;
-  height: 100%;
-  background-image: linear-gradient(var(--yellow) 0%, var(--lightYellow) 20%);
-}
-
-.responseDetailContainer .content-container.flex .half.response-about {
-  width: 100%;
-  min-width: 100%;
-  max-width: 100%;
-  height: 20%;
-  min-height: 20%;
+  content: "from: ";
 }
 
 @keyframes floatup {

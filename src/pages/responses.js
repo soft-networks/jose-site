@@ -36,7 +36,6 @@ export default class Responses extends React.Component {
   render() {
     return (
       <div className="all-container">
-        <AddResponse isOpen={true}></AddResponse>
         <div
           className={` ${ResponseStyles.responseDetailContainer} core-container`}
         >

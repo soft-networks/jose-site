@@ -2,7 +2,6 @@
 
 .piece-preview {
   position: relative;
-  z-index: 500;
 }
 
 .piece-preview .preview-content {
