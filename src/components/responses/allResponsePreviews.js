@@ -36,6 +36,9 @@ export default class AllResponsePreviews extends React.Component {
         dbValues = dbValues.filter(function (el) {
           return el !== undefined
         })
+        dbValues.forEach(response => {
+          response["randomLeftPos"] = Math.random() * 90
+        })
         this.setState({ firebaseDataList: dbValues, responseList: [] })
       })
 
@@ -59,8 +62,9 @@ export default class AllResponsePreviews extends React.Component {
       let modifiedFirebaseArray = this.state.firebaseDataList
       let randomIndex = Math.floor(Math.random() * modifiedFirebaseArray.length)
       let randomResponse = modifiedFirebaseArray.splice(randomIndex, 1)
+      randomResponse = randomResponse[0]
       let modifiedResponseList = this.state.responseList
-      modifiedResponseList.push(randomResponse[0])
+      modifiedResponseList.push(randomResponse)
       this.setState({
         responseList: modifiedResponseList,
         firebaseDataList: modifiedFirebaseArray,
@@ -78,10 +82,11 @@ export default class AllResponsePreviews extends React.Component {
   //This then works because it just is returning new things and only the new ones are rendered :)
   renderAllPreviews = () => {
     let responseListDOM = this.state.responseList.map(
-      ({ author, response }, index) => (
+      ({ author, response, randomLeftPos }, index) => (
         <ResponsePreview
           author={author}
           response={response}
+          randomLeftPos={randomLeftPos}
           key={index}
         ></ResponsePreview>
       )

@@ -1,13 +1,8 @@
-#preview-container {
-  padding-top: 72px;
-  background: linear-gradient(var(--white), var(--blue));
-}
-
 /* Specic to preview */
 
 .piece-preview {
-  margin-bottom: 32px;
   position: relative;
+  z-index: 500;
 }
 
 .piece-preview .preview-content {
@@ -27,15 +22,6 @@
 
 .piece-preview:hover .preview-content {
   animation: grow 1s forwards;
-}
-
-/* TODO: MOVE THIS TO JAVASCRIPT BOSS! */
-.piece-preview:nth-child(2n) {
-  left: 5%;
-}
-
-.piece-preview:nth-child(3n) {
-  left: -5%;
 }
 
 @keyframes grow {

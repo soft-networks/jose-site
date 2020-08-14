@@ -2,15 +2,32 @@
   width: 100%;
   position: fixed;
   bottom: 0px;
-  background: var(--yellow);
-  font-size: 16px;
-  padding-top: 12px;
-  padding-bottom: 16px;
-  box-shadow: 0px 0px 12px 10px var(--yellow);
+  font-size: 14px;
+
   font-family: Helvetica, sans-serif;
+  padding-bottom: 32px;
 }
 
-/* TODO: change these obviously.. */
+.button,
+.responsePreview {
+  background: var(--yellow);
+  box-shadow: 0px 0px 12px 10px var(--yellow);
+  cursor: pointer;
+  padding: 4px;
+}
+
+.button:hover,
+.responsePreview:hover,
+.expandedResponsePreview {
+  background: var(--lightYellow);
+  box-shadow: 0px 0px 12px 10px var(--lightYellow);
+}
+
+.button {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
 .add {
   float: left;
 }
@@ -19,11 +36,41 @@
   float: right;
 }
 
+.responsePreview,
+.responseDetail {
+  font-size: 16px;
+  line-height: 18px;
+}
 .responsePreview {
   position: fixed;
   bottom: 20px;
-  left: 0px;
-  background: white;
+  max-width: 250px;
+}
+
+.responsePreview .author,
+.responseDetail .author {
+  font-style: italic;
+}
+
+.responsePreview .author::before,
+.responseDetail .author::before {
+  content: "from";
+}
+
+/* TODO: MOVE THIS TO A BETTER PLACE LMAO */
+.responseDetailContainer,
+.addResponse {
+  padding-top: 32px;
+  height: 100%;
+  background-image: linear-gradient(var(--yellow) 0%, var(--lightYellow) 20%);
+}
+
+.responseDetailContainer .content-container.flex .half.response-about {
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  height: 20%;
+  min-height: 20%;
 }
 
 @keyframes floatup {
@@ -34,3 +81,5 @@
     bottom: 100vh;
   }
 }
+
+/* TODO mobile layouts */

@@ -53,7 +53,7 @@ export default function PieceDetail(props) {
 
   return (
     <CoreLayout>
-      <div className={detailStyles.detailContainer}>
+      <div className={`${detailStyles.detailContainer} core-container`}>
         <div className="content-container">
           <div className={detailStyles.header}>
             <div> {props.pieceName}</div>

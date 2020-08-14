@@ -15,7 +15,31 @@ body,
 :root {
   --blue: rgb(0, 150, 255);
   --yellow: rgb(255, 255, 90);
-  --white: rgba(255, 255, 255, 1);
+  --lightYellow: rgb(255, 255, 245);
+  --white: rgb(255, 255, 255, 1);
+}
+
+.all-container {
+  display: flex;
+}
+
+.core-container {
+  height: 100%;
+  padding-top: 32px;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  flex-basis: 0;
+  flex-grow: 999;
+}
+
+.secondary-container.collapsed {
+  display: none;
+}
+
+.secondary-container.expanded {
+  flex: 1 1;
+  height: 100%;
+  width: 30vw;
 }
 
 .content-container {
@@ -24,6 +48,11 @@ body,
   padding-right: 12px;
   max-width: 800px;
   margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.content-container.header-container {
+  margin-bottom: 72px;
 }
 
 /* TODO This is just bad, there are better ways to do a cgrid */
@@ -35,14 +64,14 @@ body,
 
 .content-container.flex .half {
   flex: 1;
-
-  width: calc(50% - 8px);
-  min-width: calc(50% - 8px);
-  max-width: calc(50% - 8px);
+  width: calc(50% - 16px);
+  min-width: calc(50% - 16px);
+  max-width: calc(50% - 16px);
+  margin-bottom: 24px;
 }
 
 .content-container.flex .half:nth-child(2n) {
-  margin-left: 16px;
+  margin-left: 32px;
 }
 
 a,
@@ -52,16 +81,7 @@ a:visited {
 }
 
 #home-container {
-  height: 100%;
-  background: var(--blue);
-}
-
-#about-container {
-  padding-top: 32px;
-  padding-bottom: 32px;
-  background: var(--white);
-  font-size: 16px;
-  line-height: 20px;
+  background: linear-gradient(var(--white) 10%, var(--blue) 100%);
 }
 
 /* Phone portrait */
@@ -82,14 +102,14 @@ a:visited {
     min-width: 100%;
   }
 
-  #about-container {
+  .content-container.header-container {
     padding-bottom: 12px;
   }
 
-  #about-container .content-container.flex {
+  .content-container.header-container.flex {
     display: block;
   }
-  #about-container .content-container.flex .half {
+  .content-container.header-container.flex .half {
     display: inline;
   }
 }

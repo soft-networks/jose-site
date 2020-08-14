@@ -26,8 +26,8 @@ export default function AllPiecePreview() {
   `)
 
   return (
-    <div id="preview-container">
-      <div className="content-container flex">
+    <div>
+      <div className="content-container flex" id="preview-container">
         {data.allPiecesJson.edges.map(({ node }, index) => (
           <PiecePreview
             pieceName={node.name}
