@@ -55,6 +55,7 @@ export default class AllResponsePreviews extends React.Component {
           if (response) {
             let currentResponseList = this.state.responseList
             currentResponseList.push(response)
+            console.log("Adding a new response from server")
             this.setState({ responseList: currentResponseList })
           }
         }
@@ -69,6 +70,7 @@ export default class AllResponsePreviews extends React.Component {
       randomResponse = randomResponse[0]
       let modifiedResponseList = this.state.responseList
       modifiedResponseList.push(randomResponse)
+      console.log("Adding a new response because time has passed")
       this.setState({
         responseList: modifiedResponseList,
         firebaseDataList: modifiedFirebaseArray,
