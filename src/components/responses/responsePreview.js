@@ -10,6 +10,7 @@ export default function ResponsePreview({ author, response, randomLeftPos }) {
   useEffect(() => {
     if (bottomPos < 110 && animPlaying) {
       const interval_ID = setInterval(() => {
+        console.log(bottomPos)
         setBottomPos(bottomPos => bottomPos + 1)
       }, animLength)
       return () => {
@@ -23,7 +24,9 @@ export default function ResponsePreview({ author, response, randomLeftPos }) {
       className={`${ResponseStyles.responsePreview} ${
         !animPlaying ? ResponseStyles.expandedResponsePreview : ""
       }`}
-      style={{ bottom: bottomPos + "vh", left: randomLeftPos + "%" }}
+      style={{
+        bottom: bottomPos + "vh",
+      }}
       onMouseOver={() => {
         setAnimPlaying(false)
       }}

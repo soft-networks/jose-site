@@ -67,6 +67,11 @@
   box-shadow: 0px 0px 12px 10px var(--lightYellow);
 }
 
+.responsePreview:hover {
+  width: 200px;
+  translate: translateX(-200px);
+}
+
 .add {
   float: left;
 }
@@ -82,7 +87,9 @@
 .responsePreview {
   position: fixed;
   bottom: 20px;
-  max-width: 250px;
+  left: calc(100% - 32px);
+  width: 100px;
+  transform: translateX(-100%);
 }
 
 .responsePreview .author,

@@ -40,9 +40,6 @@ export default class AllResponsePreviews extends React.Component {
             dbValues.push(dbObject)
           }
         })
-        dbValues.forEach(response => {
-          response["randomLeftPos"] = Math.random() * 90
-        })
         this.setState({ firebaseDataList: dbValues, responseList: [] })
       })
 
@@ -54,9 +51,12 @@ export default class AllResponsePreviews extends React.Component {
           let response = data.val()
           if (response) {
             let currentResponseList = this.state.responseList
-            currentResponseList.push(response)
-            console.log("Adding a new response from server")
-            this.setState({ responseList: currentResponseList })
+            //Simple fix for now, just dont push until we've read from server
+            if (this.state.firebaseDataList.length > 0) {
+              currentResponseList.push(response)
+              console.log("Adding a new response from server")
+              this.setState({ responseList: currentResponseList })
+            }
           }
         }
       })

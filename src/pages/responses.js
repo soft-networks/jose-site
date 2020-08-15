@@ -39,21 +39,18 @@ export default class Responses extends React.Component {
   }
   render() {
     return (
-      <div className="all-container">
-        <div
-          className={` ${ResponseStyles.responseDetailContainer} core-container`}
-        >
-          <div className="content-container flex header-container">
-            <div className="half">
-              We encourage visitors who visit this website, to respond to Jose's
-              work. All responses are publically visible to website visitors.
-              They will also be sent, via mail or read via phone to Jose. We
-              expect to send the next set of responses to Jose on August 18th,
-              2020.
-            </div>
+      <div
+        className={` ${ResponseStyles.responseDetailContainer} core-container`}
+      >
+        <div className="content-container flex header-container">
+          <div className="half">
+            We encourage visitors who visit this website, to respond to Jose's
+            work. All responses are publically visible to website visitors. They
+            will also be sent, via mail or read via phone to Jose. We expect to
+            send the next set of responses to Jose on August 18th, 2020.
           </div>
-          <div className="content-container flex">{this.renderResponses()}</div>
         </div>
+        <div className="content-container flex">{this.renderResponses()}</div>
       </div>
     )
   }
