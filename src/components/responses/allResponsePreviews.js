@@ -7,7 +7,7 @@ export default class AllResponsePreviews extends React.Component {
     super(props)
     this.DBREF_STRING = "/joseSite/responses/"
 
-    this.waitTime = 10000
+    this.waitTime = 10 * 1000
     this.intervalID = ""
 
     this.state = {
@@ -32,9 +32,13 @@ export default class AllResponsePreviews extends React.Component {
       .ref(this.DBREF_STRING)
       .once("value")
       .then(snapshot => {
-        let dbValues = snapshot.val()
-        dbValues = dbValues.filter(function (el) {
-          return el !== undefined
+        let dbObjects = snapshot.val()
+        let dbValues = []
+        Object.keys(dbObjects).forEach(dbKey => {
+          let dbObject = dbObjects[dbKey]
+          if (dbObject != undefined) {
+            dbValues.push(dbObject)
+          }
         })
         dbValues.forEach(response => {
           response["randomLeftPos"] = Math.random() * 90

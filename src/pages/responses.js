@@ -18,16 +18,20 @@ export default class Responses extends React.Component {
       .ref(this.DBREF_STRING)
       .once("value")
       .then(snapshot => {
-        let dbValues = snapshot.val()
-        dbValues = dbValues.filter(function (el) {
-          return el !== undefined
+        let dbObjects = snapshot.val()
+        let dbValues = []
+        Object.keys(dbObjects).forEach(dbKey => {
+          let dbObject = dbObjects[dbKey]
+          if (dbObject != undefined) {
+            dbValues.push(dbObject)
+          }
         })
         this.setState({ firebaseDataList: dbValues })
       })
   }
   renderResponses = () => {
-    return this.state.firebaseDataList.map(response => (
-      <div className={`${ResponseStyles.responseDetail} half`}>
+    return this.state.firebaseDataList.map((response, index) => (
+      <div className={`${ResponseStyles.responseDetail} half`} key={index}>
         <div className={ResponseStyles.author}> {response.author}</div>
         <div className={ResponseStyles.response}> {response.response}</div>
       </div>

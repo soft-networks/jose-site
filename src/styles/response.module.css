@@ -41,11 +41,13 @@
   position: fixed;
   bottom: 0px;
   font-size: 14px;
-  padding-bottom: 32px;
+  padding-bottom: 16px;
+  padding-top: 16px;
   z-index: 2;
+  background: var(--yellow);
+  box-shadow: 0px 0px 12px 10px var(--yellow);
 }
 
-.button,
 .responsePreview {
   background: var(--yellow);
   box-shadow: 0px 0px 12px 10px var(--yellow);
@@ -53,16 +55,16 @@
   padding: 4px;
 }
 
+.button {
+  cursor: pointer;
+  font-size: 18px;
+}
+
 .button:hover,
 .responsePreview:hover,
 .expandedResponsePreview {
   background: var(--lightYellow);
   box-shadow: 0px 0px 12px 10px var(--lightYellow);
-}
-
-.button {
-  padding-top: 12px;
-  padding-bottom: 12px;
 }
 
 .add {
