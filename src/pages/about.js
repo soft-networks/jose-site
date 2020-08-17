@@ -1,21 +1,19 @@
 import React from "react"
-import AllPiecePreview from "../components/pieces/allPiecePreview"
 import { graphql } from "gatsby"
 
-export default function Home({ data }) {
+export default function About({ data }) {
   //const homeContent = data.home
-  const homeData = data.allSiteTextJson.edges[0].node.home
+  const aboutData = data.allSiteTextJson.edges[0].node.learnMore
   return (
-    <div id="home-container" className="core-container">
+    <div id="about-container" className="core-container">
       <div className="content-container flex header-container">
-        {homeData.map((paragraph, index) => (
+        {aboutData.map((paragraph, index) => (
           <div className="half" key={index}>
             {" "}
             {paragraph}{" "}
           </div>
         ))}
       </div>
-      <AllPiecePreview></AllPiecePreview>
     </div>
   )
 }
@@ -25,7 +23,7 @@ export const query = graphql`
     allSiteTextJson {
       edges {
         node {
-          home
+          learnMore
         }
       }
     }

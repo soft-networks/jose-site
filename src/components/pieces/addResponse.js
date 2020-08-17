@@ -1,8 +1,23 @@
 import React, { useState } from "react"
 import ResponseStyles from "../../styles/response.module.css"
 import firebase from "gatsby-plugin-firebase"
+import { useStaticQuery, graphql } from "gatsby"
 
 export default function AddResponse({ isOpen }) {
+  const data = useStaticQuery(graphql`
+    query {
+      allSiteTextJson {
+        edges {
+          node {
+            addResponse
+          }
+        }
+      }
+    }
+  `)
+
+  let addResponseText = data.allSiteTextJson.edges[0].node.addResponse
+
   let [inputAuthor, setInputAuthor] = useState("")
   let [inputResponse, setInputResponse] = useState("")
   const DBREF_STRING = "/joseSite/responses/"
@@ -47,10 +62,9 @@ export default function AddResponse({ isOpen }) {
     >
       <div className="addResponse-container">
         <div className="header">
-          We encourage visitors who visit this website, to respond to Jose's
-          work. All responses are publically visible to website visitors. They
-          will also be sent, via mail or read via phone to Jose. We expect to
-          send the next set of responses to Jose on August 18th, 2020.
+          {addResponseText.map((paragraph, index) => (
+            <div key={index}> {paragraph} </div>
+          ))}
         </div>
         <div className={ResponseStyles.responseInput}>
           <label>

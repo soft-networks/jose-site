@@ -15,10 +15,6 @@
   padding-bottom: calc(var(--animGrowth) / 4);
 }
 
-.preview-content .name {
-  font-size: 14px;
-}
-
 .piece-preview:hover .preview-content {
   animation: grow 1s forwards;
 }

@@ -1,0 +1,40 @@
+[
+  {
+    "name": "hola mi nombre es jose miguel",
+    "slug": "/intro/",
+    "images": [
+      "./pieceData/intro/1.png",
+      "./pieceData/intro/2.png",
+      "./pieceData/intro/3.png"
+    ],
+    "date": "August 24th, 2020",
+    "translation": "./pieceData/intro/translation.md",
+    "thumb": "./pieceData/intro/thumb.png",
+    "audio": "./pieceData/intro/audio.m4a"
+  },
+  {
+    "name": "porque esta vida",
+    "slug": "/song-1/",
+    "images": ["./pieceData/song-1/1.png", "./pieceData/song-1/2.png"],
+    "date": "August 24th, 2020",
+    "thumb": "./pieceData/song-1/thumb.png"
+  },
+  {
+    "name": "love song",
+    "slug": "/song-2/",
+    "images": ["./pieceData/song-2/1.png", "./pieceData/song-2/2.png"],
+    "thumb": "./pieceData/song-2/thumb.png"
+  },
+  {
+    "name": "love song",
+    "slug": "/song-2/",
+    "images": ["./pieceData/song-2/1.png", "./pieceData/song-2/2.png"],
+    "thumb": "./pieceData/song-2/thumb.png"
+  },
+  {
+    "name": "love song",
+    "slug": "/song-2/",
+    "images": ["./pieceData/song-2/1.png", "./pieceData/song-2/2.png"],
+    "thumb": "./pieceData/song-2/thumb.png"
+  }
+]

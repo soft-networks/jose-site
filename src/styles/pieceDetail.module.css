@@ -21,7 +21,6 @@
 
 .images {
   margin-top: 12px;
-  width: 80%;
   margin: 0 auto;
 }
 
@@ -29,13 +28,11 @@
   width: 60%;
   height: 48px;
   margin: 0 auto;
-  margin-bottom: 56px;
+  margin-bottom: 24px;
 }
 
 .translation {
-  width: 80%;
   margin: 0 auto;
-  font-size: 14px;
 }
 
 .image {
