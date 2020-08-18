@@ -1,3 +1,15 @@
+const locales = {
+  en: {
+    path: "en",
+    locale: "English",
+    default: true,
+  },
+  es: {
+    path: "es",
+    locale: "Spanish",
+  },
+}
+
 exports.createPages = async ({ actions, graphql, reporter }) => {
   // Query all the pieces / projects and get their slug
   // We need this slug -> piece mapping because we'll create a piece for each slug, and we reference the piece by its slug in pieceData.
@@ -32,5 +44,31 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       component: pieceDetail,
       context: { slug },
     })
+  })
+}
+
+//This function goes in and for EVERY PAGE deletes it and RECREATES another page for it in spanish
+//An optimization here is that we can not delete it, and just create *an extra one* in spanish
+exports.onCreatePage = ({ page, actions }) => {
+  const { createPage, deletePage } = actions
+
+  return new Promise(resolve => {
+    deletePage(page)
+
+    Object.keys(locales).map(lang => {
+      const localizedPath = locales[lang].default
+        ? page.path
+        : locales[lang].path + page.path
+
+      return createPage({
+        ...page,
+        path: localizedPath,
+        context: {
+          locale: lang,
+        },
+      })
+    })
+
+    resolve()
   })
 }

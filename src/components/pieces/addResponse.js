@@ -9,14 +9,16 @@ export default function AddResponse({ isOpen }) {
       allSiteTextJson {
         edges {
           node {
-            addResponse
+            en {
+              addResponse
+            }
           }
         }
       }
     }
   `)
 
-  let addResponseText = data.allSiteTextJson.edges[0].node.addResponse
+  let addResponseText = data.allSiteTextJson.edges[0].node.en.addResponse
 
   let [inputAuthor, setInputAuthor] = useState("")
   let [inputResponse, setInputResponse] = useState("")

@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 
 export default function About({ data }) {
   //const homeContent = data.home
-  const aboutData = data.allSiteTextJson.edges[0].node.learnMore
+  const aboutData = data.allSiteTextJson.edges[0].node.en.learnMore
   return (
     <div id="about-container" className="core-container">
       <div className="content-container flex header-container">
@@ -23,7 +23,9 @@ export const query = graphql`
     allSiteTextJson {
       edges {
         node {
-          learnMore
+          en {
+            learnMore
+          }
         }
       }
     }

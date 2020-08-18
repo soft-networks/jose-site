@@ -10,12 +10,14 @@ export default function NavBanner({ pageURL }) {
       allSiteTextJson {
         edges {
           node {
-            buttons {
-              addResponse
-              seeResponse
-              seeHome
-              seeAbout
-              closeAddAResponse
+            en {
+              buttons {
+                addResponse
+                seeResponse
+                seeHome
+                seeAbout
+                closeAddAResponse
+              }
             }
           }
         }
@@ -23,7 +25,7 @@ export default function NavBanner({ pageURL }) {
     }
   `)
 
-  const buttonNames = data.allSiteTextJson.edges[0].node.buttons
+  const buttonNames = data.allSiteTextJson.edges[0].node.en.buttons
 
   const [addResponseOpen, setAddResponseOpen] = useState(false)
 
