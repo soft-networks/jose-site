@@ -25,6 +25,13 @@ body,
   line-height: 1.7em;
 }
 
+.langSwitcher {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: 12px;
+  background: red;
+}
 .core-container {
   height: 100%;
   padding-top: 32px;

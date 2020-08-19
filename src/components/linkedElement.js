@@ -1,10 +1,18 @@
 import React from "react"
 import { Link } from "gatsby"
+import { LocaleConsumer } from "../layouts/coreLayout"
 
-export default function LinkedElement({ children, linkTo, elementClass }) {
+export default function LinkedElement({ children, to, ...props }) {
   return (
-    <Link className={elementClass} to={linkTo}>
-      {children}
-    </Link>
+    <LocaleConsumer>
+      {locale => {
+        let relativePath = locale === "en" ? to : `/${locale}${to}`
+        return (
+          <Link {...props} to={relativePath}>
+            {children}
+          </Link>
+        )
+      }}
+    </LocaleConsumer>
   )
 }

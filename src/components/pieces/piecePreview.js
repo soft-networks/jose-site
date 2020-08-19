@@ -6,7 +6,7 @@ export default function PiecePreview(props) {
   function renderImageIfExists() {
     if (props.pieceImageData) {
       return (
-        <LinkedElement elementClass="thumb" linkTo={props.pieceUrl}>
+        <LinkedElement className="thumb" to={props.pieceUrl}>
           <Image fluid={props.pieceImageData} />
         </LinkedElement>
       )
@@ -17,7 +17,7 @@ export default function PiecePreview(props) {
     <div className="piece-preview half">
       <div className="preview-content">
         {renderImageIfExists()}
-        <LinkedElement elementClass="name" linkTo={props.pieceUrl}>
+        <LinkedElement className="name" to={props.pieceUrl}>
           {props.pieceName}
         </LinkedElement>
       </div>

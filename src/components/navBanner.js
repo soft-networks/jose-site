@@ -3,6 +3,8 @@ import responseStyles from "../styles/response.module.css"
 import AllResponsePreviews from "./responses/allResponsePreviews"
 import AddResponse from "./pieces/addResponse"
 import { Link, graphql, useStaticQuery } from "gatsby"
+import { LocaleConsumer } from "../layouts/coreLayout"
+import LinkedElement from "./linkedElement"
 
 export default function NavBanner({ pageURL }) {
   const data = useStaticQuery(graphql`
@@ -19,24 +21,56 @@ export default function NavBanner({ pageURL }) {
                 closeAddAResponse
               }
             }
+            es {
+              buttons {
+                addResponse
+                seeResponse
+                seeHome
+                seeAbout
+                closeAddAResponse
+              }
+            }
           }
         }
       }
     }
   `)
 
-  const buttonNames = data.allSiteTextJson.edges[0].node.en.buttons
-
   const [addResponseOpen, setAddResponseOpen] = useState(false)
 
-  function getAddResponseButton() {
-    let text = addResponseOpen
-      ? buttonNames.closeAddResponse
-      : buttonNames.addResponse
+  //TODO: ITS PROBABLY EASIER TO JUST DRIVE THIS FROM THE DATA ITSELF :)
+  function getAllButtonsForLocale(locale) {
+    if (!locale) {
+      locale = "es"
+    }
+    const buttonNames = data.allSiteTextJson.edges[0].node
+    const buttonNamesInLocale = buttonNames[locale].buttons
+
+    let homeButton = getLinkForButton("/", buttonNamesInLocale.seeHome, 1)
+    let responseButton = getLinkForButton(
+      "/responses",
+      buttonNamesInLocale.seeResponse,
+      2
+    )
+    let aboutButton = getLinkForButton(
+      "/about",
+      buttonNamesInLocale.seeAbout,
+      3
+    )
+    let addButton = getAddResponseButton(
+      buttonNamesInLocale.closeAddAResponse,
+      buttonNamesInLocale.addResponse
+    )
+    return [addButton, homeButton, responseButton, aboutButton]
+  }
+
+  function getAddResponseButton(closeText, openText) {
+    let text = addResponseOpen ? closeText : openText
     return (
       <div
         className={`${responseStyles.button}`}
         onClick={() => setAddResponseOpen(addResponseOpen => !addResponseOpen)}
+        key={0}
       >
         {text}
       </div>
@@ -51,15 +85,16 @@ export default function NavBanner({ pageURL }) {
     }
   }
 
-  function getLinkForButton(route, name) {
+  function getLinkForButton(route, name, index) {
     return (
-      <Link
+      <LinkedElement
         className={responseStyles.button}
         activeClassName={responseStyles.activeButton}
         to={route}
+        key={index}
       >
         {name}
-      </Link>
+      </LinkedElement>
     )
   }
   return (
@@ -69,10 +104,9 @@ export default function NavBanner({ pageURL }) {
         <div
           className={`content-container ${responseStyles.responseBannerContentContainer}`}
         >
-          {getLinkForButton("/", buttonNames.seeHome)}
-          {getAddResponseButton()}
-          {getLinkForButton("/responses", buttonNames.seeResponse)}
-          {getLinkForButton("/about", buttonNames.seeAbout)}
+          <LocaleConsumer>
+            {locale => getAllButtonsForLocale(locale)}
+          </LocaleConsumer>
         </div>
       </div>
       <AllResponsePreviews></AllResponsePreviews>

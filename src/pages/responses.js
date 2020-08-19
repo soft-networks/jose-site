@@ -1,12 +1,14 @@
 import React from "react"
 import firebase from "gatsby-plugin-firebase"
 import ResponseStyles from "../styles/response.module.css"
-import AddResponse from "../components/pieces/addResponse"
+import { graphql } from "gatsby"
+import { LocaleConsumer } from "../layouts/coreLayout"
 
 export default class Responses extends React.Component {
-  constructor(props) {
+  constructor({ props, data }) {
     super(props)
     this.DBREF_STRING = "/joseSite/responses/"
+    this.data = data
 
     this.state = {
       firebaseDataList: [],
@@ -29,6 +31,12 @@ export default class Responses extends React.Component {
         this.setState({ firebaseDataList: dbValues })
       })
   }
+  getResponseDetailText = locale => {
+    locale = locale ? locale : "en"
+    let responseDetailText = this.data.allSiteTextJson.edges[0].node
+    let responseDetailTextInLocale = responseDetailText[locale].responseDetail
+    return responseDetailTextInLocale
+  }
   renderResponses = () => {
     return this.state.firebaseDataList.map((response, index) => (
       <div className={`${ResponseStyles.responseDetail} half`} key={index}>
@@ -44,10 +52,14 @@ export default class Responses extends React.Component {
       >
         <div className="content-container flex header-container">
           <div className="half">
-            We encourage visitors who visit this website, to respond to Jose's
-            work. All responses are publically visible to website visitors. They
-            will also be sent, via mail or read via phone to Jose. We expect to
-            send the next set of responses to Jose on August 18th, 2020.
+            <LocaleConsumer>
+              {locale => {
+                let responseDetailText = this.getResponseDetailText(locale)
+                return responseDetailText.map((paragraph, index) => (
+                  <div key={index}> {paragraph} </div>
+                ))
+              }}
+            </LocaleConsumer>
           </div>
         </div>
         <div className="content-container flex">{this.renderResponses()}</div>
@@ -55,3 +67,20 @@ export default class Responses extends React.Component {
     )
   }
 }
+
+export const query = graphql`
+  query {
+    allSiteTextJson {
+      edges {
+        node {
+          en {
+            responseDetail
+          }
+          es {
+            responseDetail
+          }
+        }
+      }
+    }
+  }
+`

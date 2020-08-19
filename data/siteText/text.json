@@ -4,13 +4,16 @@
       "Jose Miguel Yolan Najarro is a rapper and poet. This is a space for you to explore his writings, music and works. We also invite you to respond to Jose, and engage in dialogue with him and the community around this website.",
       "Jose is currently detained at Adelanto detention center in California. All work shown here was received via mail or phone before August 12th. The next set of community responses will be sent to Jose on August 18th."
     ],
-    "addResponse": [
-      "We encourage visitors who visit this website, to respond to Jose's work. All responses are publically visible to website visitors. They will also be sent, via mail or read via phone to Jose. We expect to send the next set of responses to Jose on August 18th, 2020.",
-      "If you wish to engage with Jose using audio, you can email us an audio file at bhaviksingh@gmail.com. You can also email us to request audio of Jose's rapping, if you want to add beats on it"
-    ],
-    "learnMore": [
-      "We encourage visitors who visit this website, to respond to Jose's work. All responses are publically visible to website visitors. They will also be sent, via mail or read via phone to Jose. We expect to send the next set of responses to Jose on August 18th, 2020."
-    ],
+    "addResponse": {
+      "intro": [
+        "We encourage visitors who visit this website, to respond to Jose's work. All responses are publically visible to website visitors. They will also be sent, via mail or read via phone to Jose. We expect to send the next set of responses to Jose on August 18th, 2020.",
+        "If you wish to engage with Jose using audio, you can email us an audio file at bhaviksingh@gmail.com. You can also email us to request audio of Jose's rapping, if you want to add beats on it"
+      ],
+      "authorPlaceholder": "who are you",
+      "responsePlaceholder": "what would you like to say"
+    },
+    "learnMore": ["LEARN MORE"],
+    "responseDetail": ["Something about responses here.."],
     "buttons": {
       "addResponse": "add a response",
       "closeAddAResponse": "close",
@@ -20,20 +23,26 @@
     }
   },
   "es": {
-    "home": ["SHUMPSHUMPSHUMPSHUMP", "CRUMPCRUMPCRUMPCRUMP"],
-    "addResponse": [
-      "We encourage visitors who visit this website, to respond to Jose's work. All responses are publically visible to website visitors. They will also be sent, via mail or read via phone to Jose. We expect to send the next set of responses to Jose on August 18th, 2020.",
-      "If you wish to engage with Jose using audio, you can email us an audio file at bhaviksingh@gmail.com. You can also email us to request audio of Jose's rapping, if you want to add beats on it"
+    "home": [
+      "[ES] Introduction to Jose in spanish",
+      "More about Jose in spanish!"
     ],
-    "learnMore": [
-      "We encourage visitors who visit this website, to respond to Jose's work. All responses are publically visible to website visitors. They will also be sent, via mail or read via phone to Jose. We expect to send the next set of responses to Jose on August 18th, 2020."
-    ],
+    "addResponse": {
+      "intro": [
+        "[ES] We encourage visitors who visit this website, to respond to Jose's work. All responses are publically visible to website visitors. They will also be sent, via mail or read via phone to Jose. We expect to send the next set of responses to Jose on August 18th, 2020.",
+        "[ES] If you wish to engage with Jose using audio, you can email us an audio file at bhaviksingh@gmail.com. You can also email us to request audio of Jose's rapping, if you want to add beats on it"
+      ],
+      "authorPlaceholder": "[ES] who are you",
+      "responsePlaceholder": "[ES] what would you like to say"
+    },
+    "learnMore": ["Learn more in spanish"],
+    "responseDetail": ["[ES] Something about responses here.."],
     "buttons": {
-      "addResponse": "add a response",
-      "closeAddAResponse": "close",
-      "seeResponse": "responses",
-      "seeHome": "home",
-      "seeAbout": "about"
+      "addResponse": "agregar respuesta",
+      "closeAddAResponse": "cerca",
+      "seeResponse": "respuestas",
+      "seeHome": "hogar",
+      "seeAbout": "acerca de"
     }
   }
 }

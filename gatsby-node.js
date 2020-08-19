@@ -60,11 +60,14 @@ exports.onCreatePage = ({ page, actions }) => {
         ? page.path
         : locales[lang].path + page.path
 
+      const originalPath = page.path
+
       return createPage({
         ...page,
         path: localizedPath,
         context: {
           locale: lang,
+          originalPath: originalPath,
         },
       })
     })

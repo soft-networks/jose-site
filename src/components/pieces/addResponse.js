@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import ResponseStyles from "../../styles/response.module.css"
 import firebase from "gatsby-plugin-firebase"
 import { useStaticQuery, graphql } from "gatsby"
+import { LocaleConsumer } from "../../layouts/coreLayout"
 
 export default function AddResponse({ isOpen }) {
   const data = useStaticQuery(graphql`
@@ -10,7 +11,18 @@ export default function AddResponse({ isOpen }) {
         edges {
           node {
             en {
-              addResponse
+              addResponse {
+                intro
+                authorPlaceholder
+                responsePlaceholder
+              }
+            }
+            es {
+              addResponse {
+                intro
+                authorPlaceholder
+                responsePlaceholder
+              }
             }
           }
         }
@@ -18,11 +30,18 @@ export default function AddResponse({ isOpen }) {
     }
   `)
 
-  let addResponseText = data.allSiteTextJson.edges[0].node.en.addResponse
-
   let [inputAuthor, setInputAuthor] = useState("")
   let [inputResponse, setInputResponse] = useState("")
   const DBREF_STRING = "/joseSite/responses/"
+
+  function getAddresponseText(locale) {
+    if (!locale) {
+      locale = "en"
+    }
+    let addResponseText = data.allSiteTextJson.edges[0].node
+    let addResponseTextInLocale = addResponseText[locale].addResponse
+    return addResponseTextInLocale
+  }
 
   function handleAuthorChange(event) {
     const target = event.target
@@ -62,36 +81,44 @@ export default function AddResponse({ isOpen }) {
         ResponseStyles.addResponse
       }`}
     >
-      <div className="addResponse-container">
-        <div className="header">
-          {addResponseText.map((paragraph, index) => (
-            <div key={index}> {paragraph} </div>
-          ))}
-        </div>
-        <div className={ResponseStyles.responseInput}>
-          <label>
-            <input
-              type="text"
-              name="inputAuthor"
-              onChange={e => handleAuthorChange(e)}
-              placeholder="who are you?"
-            />
-          </label>
-        </div>
-        <div className={ResponseStyles.responseInput}>
-          <label alt="Response area">
-            <textarea
-              name="inputResponse"
-              onChange={e => handleResponseChange(e)}
-              placeholder="Your response. Tell Jose what you think about his work. Or
-              consider giving him some prompts for new rap songs, or poems"
-            ></textarea>
-          </label>
-        </div>
-        <div className={ResponseStyles.responseInput}>
-          <button onClick={() => submitResponse()}>Submit response</button>
-        </div>
-      </div>
+      <LocaleConsumer>
+        {locale => {
+          let addResponseText = getAddresponseText(locale)
+          return (
+            <div className="addResponse-container">
+              <div className="header">
+                {addResponseText.intro.map((paragraph, index) => (
+                  <div key={index}> {paragraph} </div>
+                ))}
+              </div>
+              <div className={ResponseStyles.responseInput}>
+                <label>
+                  <input
+                    type="text"
+                    name="inputAuthor"
+                    onChange={e => handleAuthorChange(e)}
+                    placeholder={addResponseText.authorPlaceholder}
+                  />
+                </label>
+              </div>
+              <div className={ResponseStyles.responseInput}>
+                <label alt="Response area">
+                  <textarea
+                    name="inputResponse"
+                    onChange={e => handleResponseChange(e)}
+                    placeholder={addResponseText.responsePlaceholder}
+                  ></textarea>
+                </label>
+              </div>
+              <div className={ResponseStyles.responseInput}>
+                <button onClick={() => submitResponse()}>
+                  Submit response
+                </button>
+              </div>
+            </div>
+          )
+        }}
+      </LocaleConsumer>
     </div>
   )
 }
