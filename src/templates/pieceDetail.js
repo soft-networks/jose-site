@@ -1,6 +1,6 @@
 import { graphql } from "gatsby"
 import React from "react"
-import Piece from "../components/pieces/pieceDetail"
+import PieceDetail from "../components/pieces/pieceDetail"
 
 /**This entire component is built off the "query" below.
 * Background: 
@@ -54,12 +54,12 @@ export default function PieceTemplate({ data }) {
     : false
 
   return (
-    <Piece
+    <PieceDetail
       pieceName={title}
       date={date}
       imagesFluidData={imagesFluidData}
       translationHTML={translationHTMLData}
       audioURL={audioURL}
-    ></Piece>
+    ></PieceDetail>
   )
 }

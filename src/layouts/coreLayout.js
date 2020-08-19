@@ -7,11 +7,17 @@ const {
   Consumer: LocaleConsumer,
 } = React.createContext()
 
-export default function CoreLayout({
-  children,
-  path,
-  pageContext: { locale, originalPath },
-}) {
+export default function CoreLayout({ children, path, pageContext }) {
+  //TODO when you're feeling bold - remove this block of code
+  let locale, originalPath
+  if (!pageContext) {
+    locale = "en"
+    originalPath = "/"
+  } else {
+    locale = pageContext["locale"]
+    originalPath = pageContext["originalPath"]
+  }
+
   console.log("Locale in the coreLayout is...: " + locale)
   console.log("Path is: " + path)
 

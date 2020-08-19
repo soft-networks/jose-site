@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import detailStyles from "../../styles/pieceDetail.module.css"
 import Image from "gatsby-image"
 import CoreLayout from "../../layouts/coreLayout"
@@ -52,18 +51,16 @@ export default function PieceDetail(props) {
   }
 
   return (
-    <CoreLayout>
-      <div className={`${detailStyles.detailContainer} core-container`}>
-        <div className="content-container">
-          <div className={detailStyles.header}>
-            <div> {props.pieceName}</div>
-            {renderTimeIfExists()}
-          </div>
-          {renderAudioIfExists()}
-          {renderTranslationIfExists()}
-          {renderImagesIfExists()}
+    <div className={`${detailStyles.detailContainer} core-container`}>
+      <div className="content-container">
+        <div className={detailStyles.header}>
+          <div> {props.pieceName}</div>
+          {renderTimeIfExists()}
         </div>
+        {renderAudioIfExists()}
+        {renderTranslationIfExists()}
+        {renderImagesIfExists()}
       </div>
-    </CoreLayout>
+    </div>
   )
 }

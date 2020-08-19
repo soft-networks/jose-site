@@ -41,9 +41,11 @@ export default function NavBanner({ pageURL }) {
   //TODO: ITS PROBABLY EASIER TO JUST DRIVE THIS FROM THE DATA ITSELF :)
   function getAllButtonsForLocale(locale) {
     if (!locale) {
-      locale = "es"
+      locale = "en"
     }
     const buttonNames = data.allSiteTextJson.edges[0].node
+    console.log(locale)
+    console.log(buttonNames)
     const buttonNamesInLocale = buttonNames[locale].buttons
 
     let homeButton = getLinkForButton("/", buttonNamesInLocale.seeHome, 1)

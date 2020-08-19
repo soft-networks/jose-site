@@ -42,7 +42,14 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     actions.createPage({
       path: `${slug}`,
       component: pieceDetail,
-      context: { slug },
+      context: { slug: slug, locale: "en", originalPath: `${slug}` },
+    })
+
+    //Also do it once for spanish too
+    actions.createPage({
+      path: `/es${slug}`,
+      component: pieceDetail,
+      context: { slug: slug, locale: "es", originalPath: `${slug}` },
     })
   })
 }
