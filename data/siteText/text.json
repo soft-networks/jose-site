@@ -17,9 +17,10 @@
     "buttons": {
       "addResponse": "add a response",
       "closeAddAResponse": "close",
-      "seeResponse": "responses",
+      "seeResponse": "community responses",
       "seeHome": "home",
-      "seeAbout": "about"
+      "seeAbout": "learn more",
+      "seeLang": "Traducir al español"
     }
   },
   "es": {
@@ -42,7 +43,8 @@
       "closeAddAResponse": "cerca",
       "seeResponse": "respuestas",
       "seeHome": "hogar",
-      "seeAbout": "acerca de"
+      "seeAbout": "acerca de",
+      "seeLang": "Translate to english"
     }
   }
 }

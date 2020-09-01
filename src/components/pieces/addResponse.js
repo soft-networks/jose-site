@@ -88,7 +88,10 @@ export default function AddResponse({ isOpen }) {
             <div className="addResponse-container">
               <div className="header">
                 {addResponseText.intro.map((paragraph, index) => (
-                  <div key={index}> {paragraph} </div>
+                  <div key={index} className={ResponseStyles.addResponseText}>
+                    {" "}
+                    {paragraph}{" "}
+                  </div>
                 ))}
               </div>
               <div className={ResponseStyles.responseInput}>

@@ -1,16 +1,15 @@
 :root {
   --blue: rgb(0, 150, 255);
 }
+
 .detailContainer {
-  background: linear-gradient(
-    rgb(222 233 255) 0%,
-    #82d2ff 30%,
-    rgb(0, 150, 255) 100%
-  );
+  display: block;
+  padding-left: calc(var(--space) + var(--margin));
+  padding-bottom: 350px;
 }
 
 .header {
-  text-align: center;
+  text-align: left;
   font-size: 24px;
   padding-bottom: 24px;
 }
@@ -20,15 +19,16 @@
 }
 
 .images {
-  margin-top: 12px;
+  margin-top: var(--space);
   margin: 0 auto;
+  padding-bottom: 96px;
 }
 
 .audio {
   width: 60%;
   height: 48px;
-  margin: 0 auto;
-  margin-bottom: 24px;
+  margin-bottom: var(--space);
+  margin-top: var(--space);
 }
 
 .translation {
@@ -36,5 +36,25 @@
 }
 
 .image {
-  margin-bottom: 12px;
+  margin-bottom: var(--space);
+}
+
+@media only screen and (min-width: 1080px) {
+  .pieceDetailContent {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .translation {
+    flex-basis: 25rem;
+    flex-grow: 1;
+    margin-right: var(--space);
+  }
+  .images {
+    flex-basis: 0;
+    flex-grow: 999;
+    margin-top: 0;
+  }
 }

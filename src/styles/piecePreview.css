@@ -56,17 +56,3 @@
     padding-bottom: calc(var(--animGrowth) / 4);
   }
 }
-
-@media only screen and (max-width: 800px) {
-  .content-container.flex .half:nth-child(2n) {
-    margin-left: 0px;
-  }
-
-  .piece-preview:nth-child(2n) {
-    left: 0%;
-  }
-
-  .piece-preview:nth-child(3n) {
-    left: 0%;
-  }
-}

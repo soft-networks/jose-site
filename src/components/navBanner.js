@@ -1,12 +1,8 @@
-import React, { useState } from "react"
-import responseStyles from "../styles/response.module.css"
-import AllResponsePreviews from "./responses/allResponsePreviews"
-import AddResponse from "./pieces/addResponse"
+import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
-import { LocaleConsumer } from "../layouts/coreLayout"
 import LinkedElement from "./linkedElement"
 
-export default function NavBanner({ pageURL }) {
+export default function NavBanner({ path, locale, originalPath }) {
   const data = useStaticQuery(graphql`
     query {
       allSiteTextJson {
@@ -14,20 +10,18 @@ export default function NavBanner({ pageURL }) {
           node {
             en {
               buttons {
-                addResponse
                 seeResponse
                 seeHome
                 seeAbout
-                closeAddAResponse
+                seeLang
               }
             }
             es {
               buttons {
-                addResponse
                 seeResponse
                 seeHome
                 seeAbout
-                closeAddAResponse
+                seeLang
               }
             }
           }
@@ -36,17 +30,14 @@ export default function NavBanner({ pageURL }) {
     }
   `)
 
-  const [addResponseOpen, setAddResponseOpen] = useState(false)
+  const buttonNames = data.allSiteTextJson.edges[0].node
+  const buttonNamesInLocale = buttonNames[locale].buttons
 
   //TODO: ITS PROBABLY EASIER TO JUST DRIVE THIS FROM THE DATA ITSELF :)
-  function getAllButtonsForLocale(locale) {
+  function getAllButtonsForLocale() {
     if (!locale) {
       locale = "en"
     }
-    const buttonNames = data.allSiteTextJson.edges[0].node
-    console.log(locale)
-    console.log(buttonNames)
-    const buttonNamesInLocale = buttonNames[locale].buttons
 
     let homeButton = getLinkForButton("/", buttonNamesInLocale.seeHome, 1)
     let responseButton = getLinkForButton(
@@ -59,39 +50,16 @@ export default function NavBanner({ pageURL }) {
       buttonNamesInLocale.seeAbout,
       3
     )
-    let addButton = getAddResponseButton(
-      buttonNamesInLocale.closeAddAResponse,
-      buttonNamesInLocale.addResponse
-    )
-    return [addButton, homeButton, responseButton, aboutButton]
-  }
 
-  function getAddResponseButton(closeText, openText) {
-    let text = addResponseOpen ? closeText : openText
-    return (
-      <div
-        className={`${responseStyles.button}`}
-        onClick={() => setAddResponseOpen(addResponseOpen => !addResponseOpen)}
-        key={0}
-      >
-        {text}
-      </div>
-    )
-  }
-
-  function getAddResponseDialogue() {
-    if (addResponseOpen) {
-      return <AddResponse isOpen={addResponseOpen}> </AddResponse>
-    } else {
-      return ""
-    }
+    let langSwitcher = getLangSwitcher()
+    return [homeButton, responseButton, aboutButton, langSwitcher]
   }
 
   function getLinkForButton(route, name, index) {
     return (
       <LinkedElement
-        className={responseStyles.button}
-        activeClassName={responseStyles.activeButton}
+        className="button"
+        activeClassName="activeButton"
         to={route}
         key={index}
       >
@@ -99,19 +67,28 @@ export default function NavBanner({ pageURL }) {
       </LinkedElement>
     )
   }
+
+  function getLangSwitcher() {
+    let text = buttonNamesInLocale.seeLang
+    if (locale === "es") {
+      return (
+        <Link to={originalPath} className="button">
+          {text}
+        </Link>
+      )
+    } else {
+      return (
+        <Link to={`/es${path}`} className="button">
+          {text}
+        </Link>
+      )
+    }
+  }
   return (
-    <div>
-      {getAddResponseDialogue()}
-      <div className={responseStyles.responseBanner}>
-        <div
-          className={`content-container ${responseStyles.responseBannerContentContainer}`}
-        >
-          <LocaleConsumer>
-            {locale => getAllButtonsForLocale(locale)}
-          </LocaleConsumer>
-        </div>
+    <div className="navBanner">
+      <div className="navBannerContentContainer">
+        {getAllButtonsForLocale()}
       </div>
-      <AllResponsePreviews></AllResponsePreviews>
     </div>
   )
 }

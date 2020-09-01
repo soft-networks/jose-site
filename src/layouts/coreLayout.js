@@ -1,6 +1,6 @@
 import React from "react"
 import NavBanner from "../components/navBanner"
-import { Link } from "gatsby"
+import AddResponseBanner from "../components/addResponseBanner"
 
 const {
   Provider: LocaleProvider,
@@ -8,43 +8,29 @@ const {
 } = React.createContext()
 
 export default function CoreLayout({ children, path, pageContext }) {
-  //TODO when you're feeling bold - remove this block of code
-  let locale, originalPath
-  if (!pageContext) {
-    locale = "en"
-    originalPath = "/"
-  } else {
-    locale = pageContext["locale"]
-    originalPath = pageContext["originalPath"]
-  }
+  let { locale, originalPath } = pageContext
 
+  //If things break, basically check for !pageContext and do things accordingly
   console.log("Locale in the coreLayout is...: " + locale)
   console.log("Path is: " + path)
 
-  function getLangSwitcher() {
-    if (locale === "es") {
-      return (
-        <Link to={originalPath} className="langSwitcher">
-          EN
-        </Link>
-      )
+  function getBackgroundStyle() {
+    if (path.includes("response")) {
+      return "yellow-gradient"
+    } else if (path.includes("about")) {
+      return "red-gradient"
     } else {
-      return (
-        <Link to={`/es${path}`} className="langSwitcher">
-          ES
-        </Link>
-      )
+      return "blue-gradient"
     }
   }
-
-  const langSwitcher = getLangSwitcher()
-
   return (
     <LocaleProvider value={locale}>
-      <div className="all-container">
-        {langSwitcher}
-        <NavBanner></NavBanner>
-        {children}
+      <div className={`all-container ${getBackgroundStyle()}`}>
+        <AddResponseBanner locale={locale} />
+        <div className="primary-container">
+          <NavBanner locale={locale} path={path} originalPath={originalPath} />
+          {children}
+        </div>
       </div>
     </LocaleProvider>
   )

@@ -56,10 +56,12 @@ export default function PieceDetail(props) {
         <div className={detailStyles.header}>
           <div> {props.pieceName}</div>
           {renderTimeIfExists()}
+          {renderAudioIfExists()}
         </div>
-        {renderAudioIfExists()}
-        {renderTranslationIfExists()}
-        {renderImagesIfExists()}
+        <div className={detailStyles.pieceDetailContent}>
+          {renderTranslationIfExists()}
+          {renderImagesIfExists()}
+        </div>
       </div>
     </div>
   )

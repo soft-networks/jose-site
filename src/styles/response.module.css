@@ -1,13 +1,12 @@
 /* TODO: MOVE THIS TO A BETTER PLACE LMAO */
-.responseDetailContainer,
-.addResponse {
-  padding-top: 32px;
-  height: 100%;
-  background-image: linear-gradient(var(--yellow) 0%, var(--lightYellow) 20%);
-}
 
 .addResponse {
-  padding: 32px;
+  padding: calc(var(--space) + var(--margin));
+  height: 100%;
+}
+
+.addResponseText {
+  margin-bottom: var(--margin);
 }
 
 .responseInput {
@@ -18,12 +17,11 @@
 .responseInput input,
 .responseInput textarea {
   width: 100%;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  padding: 12px;
+  padding: var(--margin);
   box-sizing: border-box;
   color: black;
   font-family: "Josefin Sans", sans-serif;
+  font-size: 14px;
   font-weight: 300;
 }
 
@@ -35,22 +33,6 @@
   min-height: 20%;
 }
 
-.responseBanner {
-  width: 100%;
-  position: fixed;
-  bottom: 0px;
-  padding-bottom: 16px;
-  padding-top: 16px;
-  z-index: 2;
-  background: var(--yellow);
-  box-shadow: 0px 0px 12px 10px var(--yellow);
-}
-
-.responseBannerContentContainer {
-  display: flex;
-  flex-direction: row;
-}
-
 .responsePreview {
   background: var(--yellow);
   box-shadow: 0px 0px 12px 10px var(--yellow);
@@ -58,29 +40,11 @@
   padding: 4px;
 }
 
-.button,
-.activeButton {
-  cursor: pointer;
-  flex: 1;
-  text-align: center;
-}
-
-.button:hover,
-.responsePreview:hover,
-.expandedResponsePreview,
-.activeButton {
-  background: var(--lightYellow);
-  box-shadow: 0px 0px 12px 10px var(--lightYellow);
-}
-
 .responsePreview:hover {
   width: 200px;
   translate: translateX(-200px);
 }
 
-.responsePreview,
-.responseDetail {
-}
 .responsePreview {
   position: fixed;
   bottom: 20px;
@@ -91,12 +55,19 @@
 
 .responsePreview .author,
 .responseDetail .author {
-  font-style: italic;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
 }
 
 .responsePreview .author::before,
 .responseDetail .author::before {
   content: "from: ";
+}
+
+.responsePreview:hover,
+.expandedResponsePreview {
+  background: var(--lightYellow);
+  box-shadow: 0px 0px 12px 10px var(--lightYellow);
 }
 
 @keyframes floatup {
