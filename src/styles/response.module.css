@@ -25,6 +25,9 @@
   font-weight: 300;
 }
 
+.responseDetailContainer {
+  padding-bottom: 96px;
+}
 .responseDetailContainer .content-container.flex .half.response-about {
   width: 100%;
   min-width: 100%;
@@ -54,7 +57,9 @@
 }
 
 .responsePreview .author,
-.responseDetail .author {
+.responseDetail .author,
+.responsePreview .info,
+.responseDetail .info {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
 }

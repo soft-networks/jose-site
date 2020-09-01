@@ -7,7 +7,7 @@ export default class AllResponsePreviews extends React.Component {
     super(props)
     this.DBREF_STRING = "/joseSite/responses/"
 
-    this.waitTime = 10 * 1000
+    this.waitTime = 25 * 1000
     this.intervalID = ""
 
     this.state = {

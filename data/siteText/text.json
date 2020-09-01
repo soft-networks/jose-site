@@ -10,7 +10,11 @@
         "If you wish to engage with Jose using audio, you can email us an audio file at bhaviksingh@gmail.com. You can also email us to request audio of Jose's rapping, if you want to add beats on it"
       ],
       "authorPlaceholder": "who are you",
-      "responsePlaceholder": "what would you like to say"
+      "responsePlaceholder": "what would you like to say",
+      "locationPlaceholder": "(optional) where are you?",
+      "timePlaceholder": "(optional) when are you?",
+      "respondingTo": "responding to..",
+      "submitResponse": "Submit response"
     },
     "learnMore": ["LEARN MORE"],
     "responseDetail": ["Something about responses here.."],
@@ -34,7 +38,11 @@
         "[ES] If you wish to engage with Jose using audio, you can email us an audio file at bhaviksingh@gmail.com. You can also email us to request audio of Jose's rapping, if you want to add beats on it"
       ],
       "authorPlaceholder": "[ES] who are you",
-      "responsePlaceholder": "[ES] what would you like to say"
+      "responsePlaceholder": "[ES] what would you like to say",
+      "locationPlaceholder": "[ES] (optional) where are you?",
+      "timePlaceholder": "[ES] (optional) when are you?",
+      "respondingTo": "responding to..",
+      "submitResponse": "Submit response"
     },
     "learnMore": ["Learn more in spanish"],
     "responseDetail": ["[ES] Something about responses here.."],

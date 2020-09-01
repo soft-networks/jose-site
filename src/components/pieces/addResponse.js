@@ -4,9 +4,16 @@ import firebase from "gatsby-plugin-firebase"
 import { useStaticQuery, graphql } from "gatsby"
 import { LocaleConsumer } from "../../layouts/coreLayout"
 
-export default function AddResponse({ isOpen }) {
+export default function AddResponse({ isOpen, closeResponseCallback }) {
   const data = useStaticQuery(graphql`
     query {
+      allPiecesJson {
+        edges {
+          node {
+            name
+          }
+        }
+      }
       allSiteTextJson {
         edges {
           node {
@@ -15,6 +22,10 @@ export default function AddResponse({ isOpen }) {
                 intro
                 authorPlaceholder
                 responsePlaceholder
+                locationPlaceholder
+                timePlaceholder
+                respondingTo
+                submitResponse
               }
             }
             es {
@@ -22,6 +33,10 @@ export default function AddResponse({ isOpen }) {
                 intro
                 authorPlaceholder
                 responsePlaceholder
+                locationPlaceholder
+                timePlaceholder
+                respondingTo
+                submitResponse
               }
             }
           }
@@ -32,6 +47,9 @@ export default function AddResponse({ isOpen }) {
 
   let [inputAuthor, setInputAuthor] = useState("")
   let [inputResponse, setInputResponse] = useState("")
+  let [inputLocation, setInputLocation] = useState("")
+  let [inputTime, setInputTime] = useState("")
+  let [inputPiece, setInputPiece] = useState("")
   const DBREF_STRING = "/joseSite/responses/"
 
   function getAddresponseText(locale) {
@@ -43,10 +61,46 @@ export default function AddResponse({ isOpen }) {
     return addResponseTextInLocale
   }
 
+  function getPieceOptions() {
+    let allPieces = data.allPiecesJson.edges
+    return allPieces.map(({ node }, index) => {
+      if (node.name) {
+        return <option> {node.name} </option>
+      }
+    })
+  }
+  function getPieceDropdown() {
+    return (
+      <select onChange={e => handlePieceChange(e)}>
+        <option>-</option>
+        {getPieceOptions()}
+      </select>
+    )
+  }
+  function handlePieceChange(event) {
+    console.log(event)
+    const target = event.target
+    const piece = target.value
+    console.log(piece)
+    setInputPiece(piece)
+  }
+
   function handleAuthorChange(event) {
     const target = event.target
     const author = target.value
     setInputAuthor(author)
+  }
+
+  function handleTimeChange(event) {
+    const target = event.target
+    const time = target.value
+    setInputTime(time)
+  }
+
+  function handleLocationChange(event) {
+    const target = event.target
+    const location = target.value
+    setInputLocation(location)
   }
 
   function handleResponseChange(event) {
@@ -56,13 +110,18 @@ export default function AddResponse({ isOpen }) {
   }
 
   function submitResponse() {
-    let author = inputAuthor
-    let response = inputResponse
+    let author = inputAuthor ? inputAuthor : ""
+    let response = inputResponse ? inputResponse : ""
+    let time = inputTime ? inputTime : ""
+    let location = inputLocation ? inputLocation : ""
+    let piece = inputPiece ? inputPiece : ""
 
     if (author === "" || response === "") {
       alert("Please fill out author or response")
       return
     }
+
+    closeResponseCallback()
 
     let dataLocation = firebase.database().ref(DBREF_STRING)
     let newChild = dataLocation.push()
@@ -71,6 +130,9 @@ export default function AddResponse({ isOpen }) {
     dbUpdates[DBREF_STRING + childKey] = {
       author: author,
       response: response,
+      time: time,
+      location: location,
+      piece: piece,
     }
     firebase.database().ref().update(dbUpdates)
   }
@@ -105,17 +167,45 @@ export default function AddResponse({ isOpen }) {
                 </label>
               </div>
               <div className={ResponseStyles.responseInput}>
+                <label>
+                  <input
+                    type="location"
+                    name="inputLocation"
+                    onChange={e => handleLocationChange(e)}
+                    placeholder={addResponseText.locationPlaceholder}
+                  />
+                </label>
+              </div>
+              <div className={ResponseStyles.responseInput}>
+                <label>
+                  <input
+                    type="location"
+                    name="inputTime"
+                    onChange={e => handleTimeChange(e)}
+                    placeholder={addResponseText.timePlaceholder}
+                  />
+                </label>
+              </div>
+
+              <div className={ResponseStyles.responseInput}>
                 <label alt="Response area">
                   <textarea
                     name="inputResponse"
                     onChange={e => handleResponseChange(e)}
                     placeholder={addResponseText.responsePlaceholder}
+                    style={{ resize: "none" }}
                   ></textarea>
                 </label>
               </div>
               <div className={ResponseStyles.responseInput}>
+                <label>
+                  {addResponseText.respondingTo}
+                  {getPieceDropdown()}
+                </label>
+              </div>
+              <div className={ResponseStyles.responseInput}>
                 <button onClick={() => submitResponse()}>
-                  Submit response
+                  {addResponseText.submitResponse}
                 </button>
               </div>
             </div>

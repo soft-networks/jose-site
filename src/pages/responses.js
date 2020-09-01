@@ -41,6 +41,19 @@ export default class Responses extends React.Component {
     return this.state.firebaseDataList.map((response, index) => (
       <div className={`${ResponseStyles.responseDetail} half`} key={index}>
         <div className={ResponseStyles.author}> {response.author}</div>
+        <div className={ResponseStyles.info}>
+          {response.location !== undefined
+            ? "in: " + response.location + " "
+            : ""}
+        </div>
+        <div className={ResponseStyles.info}>
+          {response.time !== undefined ? "on: " + response.time + " " : ""}
+        </div>
+        <div className={ResponseStyles.info}>
+          {response.piece !== undefined && response.piece !== "-"
+            ? "re: " + response.piece
+            : ""}
+        </div>
         <div className={ResponseStyles.response}> {response.response}</div>
       </div>
     ))
@@ -62,7 +75,12 @@ export default class Responses extends React.Component {
             </LocaleConsumer>
           </div>
         </div>
-        <div className="content-container flex">{this.renderResponses()}</div>
+        <div
+          className="content-container flex"
+          style={{ paddingBottom: "96px" }}
+        >
+          {this.renderResponses()}
+        </div>
       </div>
     )
   }

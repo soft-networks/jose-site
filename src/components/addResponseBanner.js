@@ -48,9 +48,19 @@ export default function AddResponseBanner({ locale }) {
     )
   }
 
+  function closeResponseCallback() {
+    setAddResponseOpen(addResponseOpen => false)
+  }
   function getAddResponseDialogue() {
     if (addResponseOpen) {
-      return <AddResponse isOpen={addResponseOpen}> </AddResponse>
+      return (
+        <AddResponse
+          isOpen={addResponseOpen}
+          closeResponseCallback={() => closeResponseCallback()}
+        >
+          {" "}
+        </AddResponse>
+      )
     } else {
       return ""
     }
