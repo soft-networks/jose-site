@@ -1,40 +1,100 @@
 [
   {
-    "name": "hola mi nombre es jose miguel",
+    "sectionBreak": "intro"
+  },
+  {
+    "name": "(introduction)",
     "slug": "/intro/",
-    "images": [
-      "./pieceData/intro/1.png",
-      "./pieceData/intro/2.png",
-      "./pieceData/intro/3.png"
-    ],
+    "images": ["./pieceData/intro/1.png", "./pieceData/intro/2.png"],
     "date": "August 24th, 2020",
     "translation": "./pieceData/intro/translation.md",
     "thumb": "./pieceData/intro/thumb.png",
     "audio": "./pieceData/intro/audio.m4a"
   },
   {
-    "name": "porque esta vida",
-    "slug": "/song-1/",
-    "images": ["./pieceData/song-1/1.png", "./pieceData/song-1/2.png"],
-    "date": "August 24th, 2020",
-    "thumb": "./pieceData/song-1/thumb.png"
+    "name": "José Miguel Galán",
+    "slug": "/jose/",
+    "images": [
+      "./pieceData/jose/1.png",
+      "./pieceData/jose/2.png",
+      "./pieceData/jose/3.png",
+      "./pieceData/jose/4.png"
+    ],
+    "translation": "./pieceData/jose/translation.md",
+    "thumb": "./pieceData/jose/thumb.png"
   },
   {
-    "name": "love song",
-    "slug": "/song-2/",
-    "images": ["./pieceData/song-2/1.png", "./pieceData/song-2/2.png"],
-    "thumb": "./pieceData/song-2/thumb.png"
+    "sectionBreak": "love"
   },
   {
-    "name": "love song",
-    "slug": "/song-2/",
-    "images": ["./pieceData/song-2/1.png", "./pieceData/song-2/2.png"],
-    "thumb": "./pieceData/song-2/thumb.png"
+    "name": "(another day gone)",
+    "slug": "/another-day/",
+    "images": [
+      "./pieceData/another-day/1.png",
+      "./pieceData/another-day/2.png"
+    ],
+    "translation": "./pieceData/another-day/translation.md",
+    "thumb": "./pieceData/another-day/thumb.png"
   },
   {
-    "name": "love song",
-    "slug": "/song-2/",
-    "images": ["./pieceData/song-2/1.png", "./pieceData/song-2/2.png"],
-    "thumb": "./pieceData/song-2/thumb.png"
+    "name": "(you're always on my mind)",
+    "slug": "/on-my-mind/",
+    "images": ["./pieceData/on-my-mind/1.png", "./pieceData/on-my-mind/2.png"],
+    "translation": "./pieceData/on-my-mind/translation.md",
+    "thumb": "./pieceData/on-my-mind/thumb.png"
+  },
+  {
+    "name": "(to the woman i adore)",
+    "slug": "/woman-i-adore/",
+    "images": [
+      "./pieceData/woman-i-adore/1.png",
+      "./pieceData/woman-i-adore/2.png"
+    ],
+    "translation": "./pieceData/woman-i-adore/translation.md",
+    "thumb": "./pieceData/woman-i-adore/thumb.png"
+  },
+  {
+    "name": "(hello my love)",
+    "slug": "/hello-my-love/",
+    "images": [
+      "./pieceData/hello-my-love/1.png",
+      "./pieceData/hello-my-love/2.png",
+      "./pieceData/hello-my-love/3.png"
+    ],
+    "translation": "./pieceData/hello-my-love/translation.md",
+    "thumb": "./pieceData/hello-my-love/thumb.png"
+  },
+  {
+    "sectionBreak": "decisions we make"
+  },
+  {
+    "name": "(what up loko)",
+    "slug": "/what-up-loko/",
+    "images": [
+      "./pieceData/what-up-loko/1.png",
+      "./pieceData/what-up-loko/2.png"
+    ],
+    "translation": "./pieceData/what-up-loko/translation.md",
+    "thumb": "./pieceData/what-up-loko/thumb.png"
+  },
+  {
+    "name": "(always ready)",
+    "slug": "/always-ready/",
+    "images": [
+      "./pieceData/always-ready/1.png",
+      "./pieceData/always-ready/2.png"
+    ],
+    "translation": "./pieceData/always-ready/translation.md",
+    "thumb": "./pieceData/always-ready/thumb.png"
+  },
+  {
+    "name": "(i dont know what these people think)",
+    "slug": "/i-dont-know/",
+    "images": [
+      "./pieceData/i-dont-know/1.png",
+      "./pieceData/i-dont-know/2.png"
+    ],
+    "translation": "./piei-dont-know/translation.md",
+    "thumb": "./pieceData/i-dont-know/thumb.png"
   }
 ]

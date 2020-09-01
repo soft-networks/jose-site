@@ -1,10 +1,52 @@
-Hello my name is Jose Miguel Galan Najarro\
-I am 35 years old \
-I am from El Salvador\
-I live in San Francisco California since 2001.\
-My nickname is Cholo.\
-I started to write romantic and rap music after a couple of months of being in custody of juvenile hall in San Francisco California and after 5 months of arriving to California I spent over a year incarcerated due to charges that I would rather have Daniela tell you about because they embarrass me and then for mental health reasons I stopped writing music I was sent to a group home after that year or so and I was there only for one month because I did not speak English after some months I was sent to C.J.A. in 2003 for a 90 day evaluation that I did not pass so I was there only for one month because I had a flight with a gang member from the gang Bull Dog after that I was sent back to juvey in San Francisco J.J.L and after sosme months I was sentenced to 3 years in C.J.A. and I continued writing rap music that includes some foul language I came out of C.J.A. in 2006 and stopped writing music then I was free for 1 year and I had my job and all the support of my family I am single I have no kids then I was using drugs so my urine sample came out dirty so I was given a parole violation and was sentenced to 6 months of which I only did 4 for good behavior and I started writing music again but because I had no money I could not try music school then this time I was 13 months and a half and committed another crime and after a year in San Mateo County, California, I was sentenced to 10 years in prison for attempted murder with a weapon (knife) I kept writing music at times because sometimes inspiration would disappear because of how long the sentence was and because of the level programs of 3 and 4 – 180 I would be busy now I have been 21 months in (immigration) detention and I started writing again romantic and rap music and thanks to my attorney I have had the opportunity to share with you my talent that I hope you like.\
-One last thing I do not belong to a gang\
-Thank you it really is a pleasure to have this opportunity\
-Good luck to you and everybody have fun.\
-Signature Jose Galan
+**(Introduction)**  
+¿Hola cómo están? My name is  
+José Miguel  
+And my last name is Galán
+
+_Chorus x2_  
+It’s a pleasure to meet you  
+Thank you for this opportunity  
+That you’re giving me
+
+To showcase  
+My talent  
+My rhymes come to me But if I don’t practice they’ll be gone to me  
+But new ones are born  
+I rhyme about everything In this crazy life  
+Nothing can humiliate me Whatever comes  
+We had coming Everybody gets  
+What they deserve Though sometimes  
+What we’ve got coming Turns into a song  
+Since I was a little kid  
+I started writing  
+My own songs  
+When I was in jail  
+I asked myself  
+How these bad impulses Came to control me  
+I’m from El Salvador  
+I live in California  
+I’ve spent half my life  
+Behind bars  
+Remembering the past  
+ontrolling my actions  
+Around all kinds of people  
+Criminals of course  
+A bunch of motherfuckers  
+I’m single  
+My future is every day  
+To look out for my family  
+And stop fucking up  
+Cause what you don’t advantage of You let fly away
+
+_Chorus x2_  
+It’s a pleasure to meet you  
+Thank you for this opportunity  
+That you’re giving me
+
+I’ll stay positive  
+Non stop  
+I love music  
+But I prefer rap  
+I do my own thing  
+I do what I have to  
+To come out on top

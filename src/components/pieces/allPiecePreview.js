@@ -11,10 +11,11 @@ export default function AllPiecePreview() {
             id
             name
             slug
+            sectionBreak
             thumb {
               publicURL
               childImageSharp {
-                fluid {
+                fluid(traceSVG: { color: "#ffffff" }) {
                   ...GatsbyImageSharpFluid_tracedSVG
                 }
               }
@@ -25,20 +26,34 @@ export default function AllPiecePreview() {
     }
   `)
 
+  function renderPiece(node, index) {
+    if (node.sectionBreak) {
+      return (
+        <div className="piece-preview full" key={index}>
+          {node.sectionBreak}
+        </div>
+      )
+    } else {
+      return (
+        <PiecePreview
+          pieceName={node.name}
+          pieceUrl={node.slug}
+          pieceImageUrl={node.thumb ? node.thumb.publicURL : undefined}
+          pieceImageData={
+            node.thumb ? node.thumb.childImageSharp.fluid : undefined
+          }
+          key={index}
+        ></PiecePreview>
+      )
+    }
+  }
+
   return (
     <div>
       <div className="content-container flex" id="preview-container">
-        {data.allPiecesJson.edges.map(({ node }, index) => (
-          <PiecePreview
-            pieceName={node.name}
-            pieceUrl={node.slug}
-            pieceImageUrl={node.thumb ? node.thumb.publicURL : undefined}
-            pieceImageData={
-              node.thumb ? node.thumb.childImageSharp.fluid : undefined
-            }
-            key={index}
-          ></PiecePreview>
-        ))}
+        {data.allPiecesJson.edges.map(({ node }, index) =>
+          renderPiece(node, index)
+        )}
       </div>
     </div>
   )

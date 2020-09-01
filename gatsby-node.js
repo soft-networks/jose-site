@@ -36,6 +36,10 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const pieceDetail = require.resolve(`./src/templates/pieceDetail.js`)
   pieces.forEach(({ node }) => {
     let slug = node.slug
+
+    if (!node.slug) {
+      return
+    }
     //We create a page where the "path" == slug,
     //The template we "render" into the page is the pieceDetail template that we imported
     //The "context" here passes the data that the query needs within pieceDetail

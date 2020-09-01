@@ -17,6 +17,9 @@ body,
   --yellow: rgb(255, 255, 90);
   --lightYellow: rgb(255, 255, 245);
   --white: rgb(255, 255, 255, 1);
+  --space: 24px;
+  --width: calc(50% - var(--space));
+  --margin: calc(0.5 * var(--space));
 }
 
 .all-container {
@@ -28,18 +31,19 @@ body,
 .langSwitcher {
   position: absolute;
   top: 0px;
-  left: 0px;
+  right: 0px;
   padding: 12px;
   background: red;
 }
 .core-container {
   height: 100%;
-  padding-top: 32px;
   box-sizing: border-box;
   overflow-y: scroll;
   flex-basis: 0;
   flex-grow: 999;
-  padding-bottom: 48px;
+
+  padding: 24px;
+  padding-bottom: 96px;
 }
 
 .secondary-container.collapsed {
@@ -47,23 +51,18 @@ body,
 }
 
 .secondary-container.expanded {
-  flex: 1;
+  position: absolute;
+  width: 100%;
   height: 100%;
-  width: 30vw;
-  border-right: 1px solid black;
+  z-index: 1;
+  border-right: none;
+  box-sizing: border-box;
 }
 
 .content-container {
   width: 100%;
-  padding-left: 12px;
-  padding-right: 12px;
-  max-width: 800px;
   margin: 0 auto;
   box-sizing: border-box;
-}
-
-.content-container.header-container {
-  margin-bottom: 72px;
 }
 
 /* TODO This is just bad, there are better ways to do a cgrid */
@@ -73,16 +72,25 @@ body,
   flex-wrap: wrap;
 }
 
-.content-container.flex .half {
-  flex: 1;
-  width: calc(50% - 16px);
-  min-width: calc(50% - 16px);
-  max-width: calc(50% - 16px);
-  margin-bottom: 24px;
+.content-container.header-container {
+  margin-bottom: var(--space);
 }
 
-.content-container.flex .half:nth-child(2n) {
-  margin-left: 32px;
+.content-container.flex .full {
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  flex: 1;
+  margin-left: 8px;
+  display: none;
+}
+
+.content-container.flex .half {
+  flex: 1;
+  margin: var(--margin);
+  min-width: var(--width);
+  max-width: var(--width);
+  width: var(--width);
 }
 
 a,
@@ -92,44 +100,43 @@ a:visited {
 }
 
 #home-container {
-  background: linear-gradient(var(--white) 10%, var(--blue) 100%);
+  background: linear-gradient(
+    var(--white) 8%,
+    var(--blue) 60%,
+    var(--blue) 100%
+  );
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (min-width: 1080px) {
+  :root {
+    --space: 24px;
+    --width: calc(33% - var(--space));
+    --margin: calc(0.5 * var(--space));
+  }
   .secondary-container.expanded {
-    position: absolute;
-    width: 100%;
+    flex: 1;
     height: 100%;
-    z-index: 1;
-    border-right: none;
-    box-sizing: border-box;
+    width: 30vw;
+    border-right: 1px solid white;
+    position: static;
   }
 }
 
 /* Phone portrait */
 @media only screen and (max-width: 800px) {
   .content-container {
-    padding-left: 24px;
-    padding-right: 24px;
     margin: 0 auto;
     box-sizing: border-box;
   }
 
-  .content-container.header-container {
-    margin-bottom: 24px;
+  :root {
+    --space: 8px;
+    --width: calc(100% - var(--space));
+    --margin: calc(0.5 * var(--space));
   }
-
   /* Mobile related CSS goes here (400px and under) */
   .content-container.flex .half {
     flex: 1;
-
-    width: 100%;
-    max-width: 100%;
-    min-width: 100%;
-  }
-
-  .content-container.header-container {
-    padding-bottom: 12px;
   }
 
   .content-container.header-container.flex {
