@@ -7,7 +7,12 @@ export default function PiecePreview(props) {
     if (props.pieceImageData) {
       return (
         <LinkedElement className="thumb" to={props.pieceUrl}>
-          <Image fluid={props.pieceImageData} />
+          <Image
+            fluid={props.pieceImageData}
+            fadeIn={false}
+            title={props.pieceName}
+            alt={props.pieceName}
+          />
         </LinkedElement>
       )
     }

@@ -41,7 +41,7 @@ export default function AddResponseBanner({ locale }) {
       <div
         onClick={() => setAddResponseOpen(addResponseOpen => !addResponseOpen)}
         key={0}
-        class="button"
+        className="button"
       >
         {text}
       </div>

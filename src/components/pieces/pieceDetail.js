@@ -42,7 +42,7 @@ export default function PieceDetail(props) {
             width="100%"
             url={props.audioURL}
             controls
-            autoplay
+            autoPlay
             playing
           />
         </div>

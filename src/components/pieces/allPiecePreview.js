@@ -15,8 +15,8 @@ export default function AllPiecePreview() {
             thumb {
               publicURL
               childImageSharp {
-                fluid(traceSVG: { color: "#ffffff" }) {
-                  ...GatsbyImageSharpFluid_tracedSVG
+                fluid(grayscale: true) {
+                  ...GatsbyImageSharpFluid
                 }
               }
             }

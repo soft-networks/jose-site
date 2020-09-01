@@ -1,6 +1,7 @@
 import React from "react"
 import NavBanner from "../components/navBanner"
 import AddResponseBanner from "../components/addResponseBanner"
+import { Helmet } from "react-helmet"
 
 const {
   Provider: LocaleProvider,
@@ -11,8 +12,8 @@ export default function CoreLayout({ children, path, pageContext }) {
   let { locale, originalPath } = pageContext
 
   //If things break, basically check for !pageContext and do things accordingly
-  console.log("Locale in the coreLayout is...: " + locale)
-  console.log("Path is: " + path)
+  //console.log("Locale in the coreLayout is...: " + locale)
+  //console.log("Path is: " + path)
 
   function getBackgroundStyle() {
     if (path.includes("response")) {
@@ -26,6 +27,11 @@ export default function CoreLayout({ children, path, pageContext }) {
   return (
     <LocaleProvider value={locale}>
       <div className={`all-container ${getBackgroundStyle()}`}>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>José Miguel</title>
+          <link rel="canonical" href="http://josemiguel.virtualcarelab.com" />
+        </Helmet>
         <AddResponseBanner locale={locale} />
         <div className="primary-container">
           <NavBanner locale={locale} path={path} originalPath={originalPath} />

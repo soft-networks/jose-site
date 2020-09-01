@@ -13,12 +13,36 @@ export default class AllResponsePreviews extends React.Component {
     this.state = {
       firebaseDataList: [],
       responseList: [],
+      tabVisible: true,
     }
+
+    this.hidden = ""
+    this.visbilityChange = ""
   }
 
   componentDidMount() {
     this.readResponsesFromDB()
     this.setupRandomResponseDisplay()
+
+    // Set the name of the hidden property and the change event for visibility
+    if (typeof document !== "undefined") {
+      if (typeof document.hidden !== "undefined") {
+        // Opera 12.10 and Firefox 18 and later support
+        this.hidden = "hidden"
+        this.visibilityChange = "visibilitychange"
+      } else if (typeof document.msHidden !== "undefined") {
+        this.hidden = "msHidden"
+        this.visibilityChange = "msvisibilitychange"
+      } else if (typeof document.webkitHidden !== "undefined") {
+        this.hidden = "webkitHidden"
+        this.visibilityChange = "webkitvisibilitychange"
+      }
+    }
+    document.addEventListener(
+      this.visibilityChange,
+      this.handleVisibilityChange,
+      false
+    )
   }
 
   componentWillUnmount() {
@@ -26,6 +50,7 @@ export default class AllResponsePreviews extends React.Component {
       clearInterval(this.intervalID)
     }
   }
+
   readResponsesFromDB = () => {
     firebase
       .database()
@@ -36,7 +61,7 @@ export default class AllResponsePreviews extends React.Component {
         let dbValues = []
         Object.keys(dbObjects).forEach(dbKey => {
           let dbObject = dbObjects[dbKey]
-          if (dbObject != undefined) {
+          if (dbObject !== undefined) {
             dbValues.push(dbObject)
           }
         })
@@ -54,12 +79,30 @@ export default class AllResponsePreviews extends React.Component {
             //Simple fix for now, just dont push until we've read from server
             if (this.state.firebaseDataList.length > 0) {
               currentResponseList.push(response)
-              console.log("Adding a new response from server")
               this.setState({ responseList: currentResponseList })
             }
           }
         }
       })
+  }
+
+  handleVisibilityChange = () => {
+    if (typeof document !== "undefined") {
+      if (document[this.hidden]) {
+        console.log("Leaving, so stopping interval")
+        clearInterval(this.intervalID)
+        this.intervalID = ""
+      } else {
+        console.log("Coming back, so creating interval")
+        if (this.intervalID == "") {
+          this.setupRandomResponseDisplay()
+        } else {
+          console.log(
+            "Actually didnt set up interval id... because there already was one"
+          )
+        }
+      }
+    }
   }
 
   getAndRemoveRandomFirebaseRespose = () => {

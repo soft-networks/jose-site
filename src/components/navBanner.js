@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
+import Image from "gatsby-image"
 import LinkedElement from "./linkedElement"
 
 export default function NavBanner({ path, locale, originalPath }) {
@@ -11,7 +12,13 @@ export default function NavBanner({ path, locale, originalPath }) {
             en {
               buttons {
                 seeResponse
-                seeHome
+                seeHome {
+                  childImageSharp {
+                    fixed(height: 32, grayscale: false) {
+                      ...GatsbyImageSharpFixed_tracedSVG
+                    }
+                  }
+                }
                 seeAbout
                 seeLang
               }
@@ -19,7 +26,13 @@ export default function NavBanner({ path, locale, originalPath }) {
             es {
               buttons {
                 seeResponse
-                seeHome
+                seeHome {
+                  childImageSharp {
+                    fixed(height: 32) {
+                      ...GatsbyImageSharpFixed_tracedSVG
+                    }
+                  }
+                }
                 seeAbout
                 seeLang
               }
@@ -38,47 +51,61 @@ export default function NavBanner({ path, locale, originalPath }) {
     if (!locale) {
       locale = "en"
     }
+    let homeButton = getHomeButton()
 
-    let homeButton = getLinkForButton("/", buttonNamesInLocale.seeHome, 1)
     let responseButton = getLinkForButton(
       "/responses",
       buttonNamesInLocale.seeResponse,
-      2
+      "responses"
     )
     let aboutButton = getLinkForButton(
       "/about",
       buttonNamesInLocale.seeAbout,
-      3
+      "about"
     )
-
     let langSwitcher = getLangSwitcher()
     return [homeButton, responseButton, aboutButton, langSwitcher]
   }
 
-  function getLinkForButton(route, name, index) {
+  function getLinkForButton(route, name, key) {
     return (
       <LinkedElement
-        className="button"
+        className={`button ${key}`}
         activeClassName="activeButton"
         to={route}
-        key={index}
+        key={key}
       >
         {name}
       </LinkedElement>
     )
   }
 
+  function getHomeButton() {
+    let homeImageData = buttonNamesInLocale.seeHome.childImageSharp.fixed
+    let homeLink = "/"
+    return (
+      <LinkedElement
+        className="button"
+        activeClassName="activeButton"
+        to={homeLink}
+        key={0}
+        id="jose-logo"
+      >
+        <Image fixed={homeImageData} alt="Jose Miguel" />
+      </LinkedElement>
+    )
+  }
   function getLangSwitcher() {
     let text = buttonNamesInLocale.seeLang
     if (locale === "es") {
       return (
-        <Link to={originalPath} className="button">
+        <Link key={5} to={originalPath} className="button">
           {text}
         </Link>
       )
     } else {
       return (
-        <Link to={`/es${path}`} className="button">
+        <Link key={5} to={`/es${path}`} className="button">
           {text}
         </Link>
       )

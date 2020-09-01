@@ -15,10 +15,10 @@
     "learnMore": ["LEARN MORE"],
     "responseDetail": ["Something about responses here.."],
     "buttons": {
-      "addResponse": "add a response",
+      "addResponse": "respond to José Miguel",
       "closeAddAResponse": "close",
       "seeResponse": "community responses",
-      "seeHome": "home",
+      "seeHome": "./logo_2.png",
       "seeAbout": "learn more",
       "seeLang": "Traducir al español"
     }
@@ -39,10 +39,10 @@
     "learnMore": ["Learn more in spanish"],
     "responseDetail": ["[ES] Something about responses here.."],
     "buttons": {
-      "addResponse": "agregar respuesta",
+      "addResponse": "responder a José Miguel",
       "closeAddAResponse": "cerca",
       "seeResponse": "respuestas",
-      "seeHome": "hogar",
+      "seeHome": "./logo_2.png",
       "seeAbout": "acerca de",
       "seeLang": "Translate to english"
     }

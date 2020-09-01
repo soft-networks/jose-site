@@ -150,9 +150,8 @@ a:visited {
   position: relative;
   background: var(--white);
   box-shadow: 0px 0px 12px 10px var(--white);
-  padding: var(--space);
-  padding-bottom: var(--margin);
-  margin: 0 var(--margin);
+  padding: calc(var(--margin) + var(--space));
+  padding-bottom: 0;
   z-index: 5;
 }
 
@@ -161,21 +160,41 @@ a:visited {
   flex-direction: row;
 }
 
-.button,
-.activeButton {
+.button {
   cursor: pointer;
   font-family: "Josefin Sans";
   font-weight: 500;
   font-size: 14px;
 }
 
+.button,
+.button:hover,
+.activeButton,
+.button * {
+  cursor: pointer;
+}
 .navBanner .button {
   flex: 0 0 auto;
   margin-right: var(--space);
+  color: black;
 }
 
-.navBanner .activeButton {
-  color: var(--blue);
+.navBanner .button.responses:hover,
+.navBanner .activeButton.responses {
+  color: rgb(224, 198, 63);
+}
+
+.navBanner .button.about:hover,
+.navBanner .activeButton.about {
+  color: var(--red);
+}
+
+.navBanner .button img {
+  filter: grayscale(1) brightness(0);
+}
+.navBanner .activeButton img,
+.navBanner .button:hover img {
+  filter: none;
 }
 
 @media only screen and (min-width: 1080px) {
@@ -184,6 +203,7 @@ a:visited {
     --width: calc(33% - var(--space));
     --margin: calc(0.5 * var(--space));
   }
+
   .secondary-container.expanded {
     flex: 1;
     height: 100%;
@@ -229,5 +249,15 @@ a:visited {
   .content-container.header-container.flex .half {
     display: inline;
     margin: 0;
+  }
+
+  .navBannerContentContainer {
+    max-width: 100%;
+    flex-wrap: wrap;
+  }
+
+  #jose-logo {
+    flex-basis: 100%;
+    margin-bottom: 0px;
   }
 }
