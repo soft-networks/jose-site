@@ -1,17 +1,19 @@
 /* TODO: MOVE THIS TO A BETTER PLACE LMAO */
 
 .addResponse {
-  padding: calc(var(--space) + var(--margin));
+  padding: calc(var(--space));
   height: 100%;
 }
 
 .addResponseText {
   margin-bottom: var(--margin);
+  padding: 0;
+  margin: 0;
 }
 
 .responseInput {
   width: 100%;
-  margin-top: var(--margin);
+  margin: var(--margin);
 }
 
 .responseInput input,
@@ -23,6 +25,23 @@
   font-family: "Josefin Sans", sans-serif;
   font-size: 14px;
   font-weight: 300;
+}
+
+.responseInput button {
+  background: var(--yellow);
+  padding: var(--margin);
+  font-family: "Josefin sans", sans-serif;
+  font-weight: 500;
+  border: none;
+  box-shadow: 0px 0px 5px 6px var(--yellow);
+  outline: none;
+  margin-top: var(--margin);
+  cursor: pointer;
+}
+
+.responseInput select {
+  margin-left: var(--margin);
+  padding: var(--margin);
 }
 
 .responseDetailContainer {

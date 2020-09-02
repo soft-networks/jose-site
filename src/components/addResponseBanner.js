@@ -66,7 +66,7 @@ export default function AddResponseBanner({ locale }) {
     }
   }
   return (
-    <div style={{ height: "100%" }}>
+    <div>
       {getAddResponseDialogue()}
       <div className="addResponseBanner">{getAddResponseButton()}</div>
       <AllResponsePreviews></AllResponsePreviews>

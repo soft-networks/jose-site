@@ -16,7 +16,7 @@
       "respondingTo": "responding to..",
       "submitResponse": "Submit response"
     },
-    "learnMore": ["LEARN MORE"],
+    "learnMore": "./learnMore_en.md",
     "responseDetail": ["Something about responses here.."],
     "buttons": {
       "addResponse": "respond to José Miguel",
@@ -44,7 +44,7 @@
       "respondingTo": "responding to..",
       "submitResponse": "Submit response"
     },
-    "learnMore": ["Learn more in spanish"],
+    "learnMore": "./learnMore_en.md",
     "responseDetail": ["[ES] Something about responses here.."],
     "buttons": {
       "addResponse": "responder a José Miguel",

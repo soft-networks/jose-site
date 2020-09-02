@@ -148,9 +148,12 @@ export default function AddResponse({ isOpen, closeResponseCallback }) {
           let addResponseText = getAddresponseText(locale)
           return (
             <div className="addResponse-container">
-              <div className="header">
+              <div className="header content-container flex">
                 {addResponseText.intro.map((paragraph, index) => (
-                  <div key={index} className={ResponseStyles.addResponseText}>
+                  <div
+                    key={index}
+                    className={`${ResponseStyles.addResponseText} half`}
+                  >
                     {" "}
                     {paragraph}{" "}
                   </div>

@@ -10,24 +10,24 @@ export default function About({ data }) {
     }
     let getLearnMoreText = data.allSiteTextJson.edges[0].node
     let getLearnMoreTextLocalized = getLearnMoreText[locale].learnMore
-    return getLearnMoreTextLocalized
+    let learnMoreTextHTML = getLearnMoreTextLocalized.childMarkdownRemark.html
+    return learnMoreTextHTML
   }
-  const aboutData = data.allSiteTextJson.edges[0].node.en.learnMore
+
   return (
     <div id="about-container" className="core-container">
-      <div className="content-container flex header-container">
-        <LocaleConsumer>
-          {locale => {
-            let aboutData = getLearnMoreText(locale)
-            return aboutData.map((paragraph, index) => (
-              <div className="half" key={index}>
-                {" "}
-                {paragraph}{" "}
-              </div>
-            ))
-          }}
-        </LocaleConsumer>
-      </div>
+      <LocaleConsumer>
+        {locale => {
+          let aboutHTML = getLearnMoreText(locale)
+          return (
+            <div
+              style={{ paddingBottom: "96px" }}
+              className="content-container header-container"
+              dangerouslySetInnerHTML={{ __html: aboutHTML }}
+            />
+          )
+        }}
+      </LocaleConsumer>
     </div>
   )
 }
@@ -38,10 +38,18 @@ export const query = graphql`
       edges {
         node {
           en {
-            learnMore
+            learnMore {
+              childMarkdownRemark {
+                html
+              }
+            }
           }
           es {
-            learnMore
+            learnMore {
+              childMarkdownRemark {
+                html
+              }
+            }
           }
         }
       }

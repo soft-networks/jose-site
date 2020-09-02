@@ -50,7 +50,11 @@ export default function AllPiecePreview() {
 
   return (
     <div>
-      <div className="content-container flex" id="preview-container">
+      <div
+        className="content-container flex"
+        id="preview-container"
+        style={{ paddingBottom: "96px" }}
+      >
         {data.allPiecesJson.edges.map(({ node }, index) =>
           renderPiece(node, index)
         )}

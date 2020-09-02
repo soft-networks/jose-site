@@ -10,14 +10,14 @@ body,
   margin: 0;
   font-family: "Josefin Slab", sans-serif;
   font-weight: 500;
-  font-size: 18px;
-  line-height: 1.4em;
+  font-size: 16px;
+  line-height: 1.5em;
 }
 
 :root {
   --blue: rgb(0, 150, 255);
   --yellow: rgb(255, 255, 90);
-  --red: rgb(255, 120, 120);
+  --red: rgb(255, 140, 140);
   --lightYellow: rgb(255, 255, 200);
   --white: rgb(255, 255, 255, 1);
   --space: 24px;
@@ -87,9 +87,9 @@ body,
   z-index: 51;
 
   background-image: linear-gradient(
-    rgba(255, 255, 255, 0.8) 0%,
-    rgba(255, 255, 255, 0.8) 80%,
-    var(--yellow) 100%
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 1) 80%,
+    var(--yellow) 90%
   );
 }
 
@@ -117,6 +117,27 @@ body,
   flex: 1;
   margin-left: 8px;
   display: none;
+}
+
+#about-container .content-container {
+  column-count: 2;
+  column-gap: var(--margin);
+  column-gap: var(--space);
+  padding: var(--margin);
+  padding-top: 0px;
+}
+
+#about-container .content-container p {
+  margin: 0;
+  text-indent: 12px;
+  margin-bottom: 8px;
+}
+
+#about-container .content-container h3 {
+  width: 100%;
+}
+#about-container .content-container p:first-child {
+  text-indent: 0px;
 }
 
 .content-container.flex .half {
@@ -203,24 +224,13 @@ a:visited {
     --width: calc(33% - var(--space));
     --margin: calc(0.5 * var(--space));
   }
-
-  .secondary-container.expanded {
-    flex: 1;
-    height: 100%;
-    width: 30vw;
-    border-right: 1px solid black;
-    position: static;
-
-    background-image: linear-gradient(
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 0) 80%,
-      var(--yellow) 100%
-    );
-  }
-
   .primary-container {
     max-width: 1600px;
     margin: 0 auto;
+  }
+
+  #about-container .content-container {
+    column-count: 3;
   }
 }
 
@@ -259,5 +269,9 @@ a:visited {
   #jose-logo {
     flex-basis: 100%;
     margin-bottom: 0px;
+  }
+
+  #about-container .content-container {
+    column-count: 1;
   }
 }
