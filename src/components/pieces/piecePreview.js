@@ -9,7 +9,7 @@ export default function PiecePreview(props) {
         <LinkedElement className="thumb" to={props.pieceUrl}>
           <Image
             fluid={props.pieceImageData}
-            fadeIn={false}
+            fadeIn={true}
             title={props.pieceName}
             alt={props.pieceName}
           />

@@ -59,13 +59,15 @@ export default class AllResponsePreviews extends React.Component {
       .then(snapshot => {
         let dbObjects = snapshot.val()
         let dbValues = []
-        Object.keys(dbObjects).forEach(dbKey => {
-          let dbObject = dbObjects[dbKey]
-          if (dbObject !== undefined) {
-            dbValues.push(dbObject)
-          }
-        })
-        this.setState({ firebaseDataList: dbValues, responseList: [] })
+        if (dbObjects) {
+          Object.keys(dbObjects).forEach(dbKey => {
+            let dbObject = dbObjects[dbKey]
+            if (dbObject !== undefined) {
+              dbValues.push(dbObject)
+            }
+          })
+          this.setState({ firebaseDataList: dbValues, responseList: [] })
+        }
       })
 
     firebase

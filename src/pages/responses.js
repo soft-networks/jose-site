@@ -22,13 +22,15 @@ export default class Responses extends React.Component {
       .then(snapshot => {
         let dbObjects = snapshot.val()
         let dbValues = []
-        Object.keys(dbObjects).forEach(dbKey => {
-          let dbObject = dbObjects[dbKey]
-          if (dbObject != undefined) {
-            dbValues.push(dbObject)
-          }
-        })
-        this.setState({ firebaseDataList: dbValues })
+        if (dbObjects) {
+          Object.keys(dbObjects).forEach(dbKey => {
+            let dbObject = dbObjects[dbKey]
+            if (dbObject != undefined) {
+              dbValues.push(dbObject)
+            }
+          })
+          this.setState({ firebaseDataList: dbValues })
+        }
       })
   }
   getResponseDetailText = locale => {
@@ -42,15 +44,19 @@ export default class Responses extends React.Component {
       <div className={`${ResponseStyles.responseDetail} half`} key={index}>
         <div className={ResponseStyles.author}> {response.author}</div>
         <div className={ResponseStyles.info}>
-          {response.location !== undefined
+          {response.location !== undefined && response.location !== ""
             ? "in: " + response.location + " "
             : ""}
         </div>
         <div className={ResponseStyles.info}>
-          {response.time !== undefined ? "on: " + response.time + " " : ""}
+          {response.time !== undefined && response.time !== ""
+            ? "on: " + response.time + " "
+            : ""}
         </div>
         <div className={ResponseStyles.info}>
-          {response.piece !== undefined && response.piece !== "-"
+          {response.piece !== undefined &&
+          response.piece !== "-" &&
+          response.piece.trim() !== ""
             ? "re: " + response.piece
             : ""}
         </div>

@@ -26,6 +26,7 @@ export default function AddResponse({ isOpen, closeResponseCallback }) {
                 timePlaceholder
                 respondingTo
                 submitResponse
+                error
               }
             }
             es {
@@ -37,6 +38,7 @@ export default function AddResponse({ isOpen, closeResponseCallback }) {
                 timePlaceholder
                 respondingTo
                 submitResponse
+                error
               }
             }
           }
@@ -50,6 +52,7 @@ export default function AddResponse({ isOpen, closeResponseCallback }) {
   let [inputLocation, setInputLocation] = useState("")
   let [inputTime, setInputTime] = useState("")
   let [inputPiece, setInputPiece] = useState("")
+  let [inputError, setInputError] = useState(false)
   const DBREF_STRING = "/joseSite/responses/"
 
   function getAddresponseText(locale) {
@@ -109,6 +112,17 @@ export default function AddResponse({ isOpen, closeResponseCallback }) {
     setInputResponse(response)
   }
 
+  function setErrorTrue() {
+    setInputError(true)
+    setTimeout(() => setInputError(false), 2000)
+  }
+  function getErrorDialogue(text) {
+    if (inputError) {
+      return <div className={ResponseStyles.responseError}>{text}</div>
+    } else {
+      return ""
+    }
+  }
   function submitResponse() {
     let author = inputAuthor ? inputAuthor : ""
     let response = inputResponse ? inputResponse : ""
@@ -117,7 +131,7 @@ export default function AddResponse({ isOpen, closeResponseCallback }) {
     let piece = inputPiece ? inputPiece : ""
 
     if (author === "" || response === "") {
-      alert("Please fill out author or response")
+      setErrorTrue()
       return
     }
 
@@ -207,10 +221,18 @@ export default function AddResponse({ isOpen, closeResponseCallback }) {
                 </label>
               </div>
               <div className={ResponseStyles.responseInput}>
-                <button onClick={() => submitResponse()}>
+                <button
+                  onClick={() => submitResponse()}
+                  className={
+                    inputAuthor !== "" && inputResponse !== ""
+                      ? ResponseStyles.active
+                      : ""
+                  }
+                >
                   {addResponseText.submitResponse}
                 </button>
               </div>
+              {getErrorDialogue(addResponseText.error)}
             </div>
           )
         }}

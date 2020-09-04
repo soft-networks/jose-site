@@ -8,8 +8,7 @@
     "images": ["./pieceData/intro/1.png", "./pieceData/intro/2.png"],
     "date": "August 24th, 2020",
     "translation": "./pieceData/intro/translation.md",
-    "thumb": "./pieceData/intro/thumb.png",
-    "audio": "./pieceData/intro/audio.m4a"
+    "thumb": "./pieceData/intro/thumb.png"
   },
   {
     "name": "José Miguel Galán",
@@ -22,6 +21,27 @@
     ],
     "translation": "./pieceData/jose/translation.md",
     "thumb": "./pieceData/jose/thumb.png"
+  },
+  {
+    "name": "(the family you were looking for)",
+    "slug": "/the-family/",
+    "images": ["./pieceData/the-family/1.png", "./pieceData/the-family/2.png"],
+    "date": "August 24th, 2020",
+    "translation": "./pieceData/the-family/translation.md",
+    "thumb": "./pieceData/the-family/thumb.png",
+    "audio": "./pieceData/the-family/audio.mp3"
+  },
+  {
+    "name": "(warrior of life)",
+    "slug": "/warrior-of-life/",
+    "images": [
+      "./pieceData/warrior-of-life/1.png",
+      "./pieceData/warrior-of-life/2.png"
+    ],
+    "date": "August 24th, 2020",
+    "translation": "./pieceData/warrior-of-life/translation.md",
+    "thumb": "./pieceData/warrior-of-life/thumb.png",
+    "audio": "./pieceData/warrior-of-life/audio.mp3"
   },
   {
     "sectionBreak": "love"

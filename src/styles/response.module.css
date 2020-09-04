@@ -11,6 +11,11 @@
   margin: 0;
 }
 
+.responseError {
+  color: var(--red);
+  margin: var(--margin);
+}
+
 .responseInput {
   width: 100%;
   margin: var(--margin);
@@ -28,15 +33,23 @@
 }
 
 .responseInput button {
-  background: var(--yellow);
   padding: var(--margin);
   font-family: "Josefin sans", sans-serif;
   font-weight: 500;
-  border: none;
-  box-shadow: 0px 0px 5px 6px var(--yellow);
   outline: none;
   margin-top: var(--margin);
   cursor: pointer;
+  border: none;
+  box-shadow: 0px 0px 5px 6px var(--white);
+  background: var(--white);
+  color: gray;
+}
+
+.responseInput button.active {
+  border: none;
+  box-shadow: 0px 0px 5px 6px var(--yellow);
+  background: var(--yellow);
+  color: black;
 }
 
 .responseInput select {

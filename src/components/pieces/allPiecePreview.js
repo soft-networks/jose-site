@@ -16,7 +16,7 @@ export default function AllPiecePreview() {
               publicURL
               childImageSharp {
                 fluid(grayscale: true) {
-                  ...GatsbyImageSharpFluid
+                  ...GatsbyImageSharpFluid_noBase64
                 }
               }
             }

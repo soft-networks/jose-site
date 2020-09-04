@@ -1,23 +1,26 @@
 {
   "en": {
     "home": [
-      "Jose Miguel Yolan Najarro is a rapper and poet. This is a space for you to explore his writings, music and works. We also invite you to respond to Jose, and engage in dialogue with him and the community around this website.",
-      "Jose is currently detained at Adelanto detention center in California. All work shown here was received via mail or phone before August 12th. The next set of community responses will be sent to Jose on August 18th."
+      "José Miguel Galan Najarro is a rapper and poet. This is a space for you to explore his writings, music and works. We also invite you to respond to Jose, and engage in dialogue with him and the community around this website. ",
+      "José Miguel is currently detained at Adelanto ICE Processing Center in Adelanto, California. All work shown here was received via mail or phone. The next set of community responses will be sent to José Miguel sometime after October 1st, 2020."
     ],
     "addResponse": {
       "intro": [
-        "We encourage visitors who visit this website, to respond to Jose's work. All responses are publically visible to website visitors. They will also be sent, via mail or read via phone to Jose. We expect to send the next set of responses to Jose on August 18th, 2020.",
-        "If you wish to engage with Jose using audio, you can email us an audio file at bhaviksingh@gmail.com. You can also email us to request audio of Jose's rapping, if you want to add beats on it"
+        "We encourage visitors who visit this website, to respond to José Miguel’s work. They will also be sent, via mail or read via phone to José Miguel sometime after October 1st, 2020.  If you want to send him something other than a written response, or want access to his audio files, please email us at virtualcarelab@gmail.com. ",
+        "Please note that all responses are publicly visible to all people who visit this website.You can email us if you want your response removed. Finally, we may remove responses if we don’t feel they are written with positive intentions. "
       ],
       "authorPlaceholder": "who are you",
       "responsePlaceholder": "what would you like to say",
       "locationPlaceholder": "(optional) where are you?",
       "timePlaceholder": "(optional) when are you?",
       "respondingTo": "responding to..",
-      "submitResponse": "Submit response"
+      "submitResponse": "Submit response",
+      "error": "Please add at least an author and response"
     },
     "learnMore": "./learnMore_en.md",
-    "responseDetail": ["Something about responses here.."],
+    "responseDetail": [
+      "These are all the responses written by the community to José Miguel. We encourage you to add your own response and be part of this dialogue of care. "
+    ],
     "buttons": {
       "addResponse": "respond to José Miguel",
       "closeAddAResponse": "close",
@@ -42,7 +45,8 @@
       "locationPlaceholder": "[ES] (optional) where are you?",
       "timePlaceholder": "[ES] (optional) when are you?",
       "respondingTo": "responding to..",
-      "submitResponse": "Submit response"
+      "submitResponse": "Submit response",
+      "error": "Please add at least an author and response"
     },
     "learnMore": "./learnMore_en.md",
     "responseDetail": ["[ES] Something about responses here.."],

@@ -5,54 +5,27 @@
 }
 
 .piece-preview .preview-content {
-  width: 100%;
   position: relative;
   text-align: center;
-
-  animation: shrink 1s forwards;
+  /* animation: shrink 1s forwards; */
   --animGrowth: 12px;
-  padding-top: calc(var(--animGrowth) / 4);
-  padding-bottom: calc(var(--animGrowth) / 4);
+  width: 100%;
+  transform: translate(0px, 0px);
+  padding: calc(var(--animGrowth) / 4);
+
+  -webkit-transition: width 1s, transform 1s, padding 1s;
+  transition: width 1s, transform 1s, padding 1s;
+  transition-timing-function: ease;
 }
 
 .piece-preview:hover .preview-content {
-  animation: grow 1s forwards;
-}
+  width: calc(100% + var(--animGrowth));
+  transform: translate(
+    calc(-0.5 * var(--animGrowth)),
+    calc(-0.5 * var(--animGrowth))
+  );
+  padding: 0px;
 
-@keyframes grow {
-  0% {
-    width: 100%;
-    transform: translate(0px, 0px);
-    padding-top: calc(var(--animGrowth) / 4);
-    padding-bottom: calc(var(--animGrowth) / 4);
-  }
-
-  100% {
-    width: calc(100% + var(--animGrowth));
-    transform: translate(
-      calc(-0.5 * var(--animGrowth)),
-      calc(-0.5 * var(--animGrowth))
-    );
-    padding-top: 0px;
-    padding-bottom: 0x;
-  }
-}
-
-@keyframes shrink {
-  0% {
-    width: calc(100% + var(--animGrowth));
-    transform: translate(
-      calc(-0.5 * var(--animGrowth)),
-      calc(-0.5 * var(--animGrowth))
-    );
-    padding-top: 0px;
-    padding-bottom: 0x;
-  }
-
-  100% {
-    width: 100%;
-    transform: translate(0px, 0px);
-    padding-top: calc(var(--animGrowth) / 4);
-    padding-bottom: calc(var(--animGrowth) / 4);
-  }
+  -webkit-transition: width 1s, transform 1s, padding 1s;
+  transition: width 1s, transform 1s, padding 1s;
 }

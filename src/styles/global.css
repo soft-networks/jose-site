@@ -91,6 +91,9 @@ body,
     rgba(255, 255, 255, 1) 80%,
     var(--yellow) 90%
   );
+
+  padding-bottom: 200px;
+  overflow-y: scroll;
 }
 
 .content-container {
@@ -169,8 +172,6 @@ a:visited {
 .navBanner {
   width: 100%;
   position: relative;
-  background: var(--white);
-  box-shadow: 0px 0px 12px 10px var(--white);
   padding: calc(var(--margin) + var(--space));
   padding-bottom: 0;
   z-index: 5;
