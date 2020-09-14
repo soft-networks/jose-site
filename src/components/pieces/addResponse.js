@@ -23,7 +23,6 @@ export default function AddResponse({ isOpen, closeResponseCallback }) {
                 authorPlaceholder
                 responsePlaceholder
                 locationPlaceholder
-                timePlaceholder
                 respondingTo
                 submitResponse
                 error
@@ -35,7 +34,6 @@ export default function AddResponse({ isOpen, closeResponseCallback }) {
                 authorPlaceholder
                 responsePlaceholder
                 locationPlaceholder
-                timePlaceholder
                 respondingTo
                 submitResponse
                 error
@@ -50,7 +48,6 @@ export default function AddResponse({ isOpen, closeResponseCallback }) {
   let [inputAuthor, setInputAuthor] = useState("")
   let [inputResponse, setInputResponse] = useState("")
   let [inputLocation, setInputLocation] = useState("")
-  let [inputTime, setInputTime] = useState("")
   let [inputPiece, setInputPiece] = useState("")
   let [inputError, setInputError] = useState(false)
   const DBREF_STRING = "/joseSite/responses/"
@@ -94,12 +91,6 @@ export default function AddResponse({ isOpen, closeResponseCallback }) {
     setInputAuthor(author)
   }
 
-  function handleTimeChange(event) {
-    const target = event.target
-    const time = target.value
-    setInputTime(time)
-  }
-
   function handleLocationChange(event) {
     const target = event.target
     const location = target.value
@@ -126,7 +117,6 @@ export default function AddResponse({ isOpen, closeResponseCallback }) {
   function submitResponse() {
     let author = inputAuthor ? inputAuthor : ""
     let response = inputResponse ? inputResponse : ""
-    let time = inputTime ? inputTime : ""
     let location = inputLocation ? inputLocation : ""
     let piece = inputPiece ? inputPiece : ""
 
@@ -141,11 +131,12 @@ export default function AddResponse({ isOpen, closeResponseCallback }) {
     let newChild = dataLocation.push()
     let childKey = newChild.key
     let dbUpdates = {}
+    let time = new Date().toLocaleDateString()
     dbUpdates[DBREF_STRING + childKey] = {
       author: author,
       response: response,
-      time: time,
       location: location,
+      time: time,
       piece: piece,
     }
     firebase.database().ref().update(dbUpdates)
@@ -193,17 +184,6 @@ export default function AddResponse({ isOpen, closeResponseCallback }) {
                   />
                 </label>
               </div>
-              <div className={ResponseStyles.responseInput}>
-                <label>
-                  <input
-                    type="location"
-                    name="inputTime"
-                    onChange={e => handleTimeChange(e)}
-                    placeholder={addResponseText.timePlaceholder}
-                  />
-                </label>
-              </div>
-
               <div className={ResponseStyles.responseInput}>
                 <label alt="Response area">
                   <textarea

@@ -44,6 +44,63 @@
     "audio": "./pieceData/warrior-of-life/audio.mp3"
   },
   {
+    "sectionBreak": "incarceration"
+  },
+  {
+    "name": "(another day that will fly by like any other)",
+    "slug": "/another-day-fly/",
+    "images": [
+      "./pieceData/another-day-fly/1.png",
+      "./pieceData/another-day-fly/2.png"
+    ],
+    "translation": "./pieceData/another-day-fly/translation.md",
+    "thumb": "./pieceData/another-day-fly/thumb.png"
+  },
+  {
+    "name": "(another identical day)",
+    "slug": "/another-identical-day/",
+    "images": [
+      "./pieceData/another-identical-day/1.png",
+      "./pieceData/another-identical-day/2.png"
+    ],
+    "translation": "./pieceData/another-identical-day/translation.md",
+    "thumb": "./pieceData/another-identical-day/thumb.png"
+  },
+  {
+    "name": "(i remember the first time i came (to the united states))",
+    "slug": "/i-remember/",
+    "images": ["./pieceData/i-remember/1.png", "./pieceData/i-remember/2.png"],
+    "translation": "./pieceData/i-remember/translation.md",
+    "thumb": "./pieceData/i-remember/thumb.png"
+  },
+  {
+    "name": "(rapping in prison)",
+    "slug": "/rapping-in-prison/",
+    "images": [
+      "./pieceData/rapping-in-prison/1.png",
+      "./pieceData/rapping-in-prison/2.png"
+    ],
+    "translation": "./pieceData/rapping-in-prison/translation.md",
+    "thumb": "./pieceData/rapping-in-prison/thumb.png"
+  },
+  {
+    "name": "(June 12 2020)",
+    "slug": "/june-12/",
+    "images": ["./pieceData/june-12/1.png", "./pieceData/june-12/2.png"],
+    "translation": "./pieceData/june-12/translation.md",
+    "thumb": "./pieceData/june-12/thumb.png"
+  },
+  {
+    "name": "(coronavirus)",
+    "slug": "/coronavirus/",
+    "images": [
+      "./pieceData/coronavirus/1.png",
+      "./pieceData/coronavirus/2.png"
+    ],
+    "translation": "./pieceData/coronavirus/translation.md",
+    "thumb": "./pieceData/coronavirus/thumb.png"
+  },
+  {
     "sectionBreak": "love"
   },
   {
