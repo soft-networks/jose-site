@@ -52,7 +52,9 @@ export default function PieceDetail(props) {
 
   return (
     <div className={`${detailStyles.detailContainer} core-container`}>
-      <div className="content-container">
+      <div
+        className={`${detailStyles.pieceDetailContentContainer} content-container`}
+      >
         <div className={detailStyles.header}>
           <div> {props.pieceName}</div>
           {renderTimeIfExists()}

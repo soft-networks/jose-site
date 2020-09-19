@@ -153,7 +153,10 @@ export default function AddResponse({ isOpen, closeResponseCallback }) {
           let addResponseText = getAddresponseText(locale)
           return (
             <div className="addResponse-container">
-              <div className="header content-container flex">
+              <div
+                className="content-container flex"
+                style={{ paddingLeft: 0, paddingRight: 0 }}
+              >
                 {addResponseText.intro.map((paragraph, index) => (
                   <div
                     key={index}

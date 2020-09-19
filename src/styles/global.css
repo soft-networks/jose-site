@@ -16,6 +16,7 @@ body,
 
 :root {
   --blue: rgb(64, 175, 255);
+  --lightBlue: rgb(123, 199, 253);
   --yellow: rgb(255, 255, 90);
   --red: rgb(255, 190, 190);
   --lightYellow: rgb(255, 255, 200);
@@ -63,8 +64,8 @@ body,
 .core-container {
   height: 100%;
   box-sizing: border-box;
-  padding: var(--space);
   padding-bottom: 96px;
+  padding-top: 0px;
 }
 
 .primary-container {
@@ -100,6 +101,8 @@ body,
   width: 100%;
   margin: 0 auto;
   box-sizing: border-box;
+  padding-left: var(--space);
+  padding-right: var(--space);
 }
 
 /* TODO This is just bad, there are better ways to do a cgrid */
@@ -107,10 +110,6 @@ body,
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-}
-
-.content-container.header-container {
-  margin-bottom: var(--space);
 }
 
 .content-container.flex .full {
@@ -122,27 +121,24 @@ body,
   display: none;
 }
 
+.content-container.header-container {
+  padding-top: 0px;
+  max-width: 800px;
+  text-align: left;
+  margin: var(--margin);
+}
+
+/* Styles specific to ABOUT  */
 #about-container .content-container {
   column-count: 2;
   column-gap: var(--margin);
   column-gap: var(--space);
-  padding: var(--margin);
   padding-top: 0px;
 }
 
 #about-container .content-container p {
-  margin: 0;
-  text-indent: 12px;
-  margin-bottom: 8px;
-}
-
-#about-container .content-container p a {
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-#about-container .content-container p a * {
-  cursor: pointer;
+  margin: var(--margin);
+  margin-bottom: 0;
 }
 
 #about-container .content-container h3 {
@@ -160,14 +156,49 @@ body,
   width: var(--width);
 }
 
-#home-container .content-container.header-container.flex .half {
-  margin-top: 0px;
+/* Styles specific to index  */
+
+#home-container .content-container.intro {
+  width: 100%;
+  display: inline-flex;
+  flex-direction: row;
+  background-image: linear-gradient(var(--white) 0%, var(--lightBlue) 100%);
+}
+
+#home-container .content-container.intro p {
+  margin: var(--margin);
+  flex: 1;
+  display: inline;
+  min-width: 200px;
+  font-style: italic;
+  margin-top: calc(0.5 * var(--margin));
+}
+
+#home-container .content-container.title {
+  margin-top: var(--space);
+  margin-bottom: 0;
+}
+
+#home-container #preview-container {
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+  background-image: linear-gradient(var(--lightBlue) 0%, var(--blue) 100%);
 }
 
 a,
 a:visited {
   color: black;
-  text-decoration: none;
+  text-decoration: underline;
+}
+
+#about-container .content-container p a {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+#about-container .content-container p a * {
+  cursor: pointer;
 }
 
 .addResponseBanner {
@@ -263,16 +294,6 @@ a:visited {
   /* Mobile related CSS goes here (400px and under) */
   .content-container.flex .half {
     flex: 1;
-  }
-
-  .content-container.header-container.flex {
-    display: block;
-    padding-left: var(--margin);
-    padding-right: var(--margin);
-  }
-  .content-container.header-container.flex .half {
-    display: inline;
-    margin: 0;
   }
 
   .navBannerContentContainer {

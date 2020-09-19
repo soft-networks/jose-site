@@ -22,7 +22,7 @@ export default function About({ data }) {
           return (
             <div
               style={{ paddingBottom: "96px" }}
-              className="content-container header-container"
+              className="content-container"
               dangerouslySetInnerHTML={{ __html: aboutHTML }}
             />
           )

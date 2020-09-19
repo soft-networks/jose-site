@@ -70,7 +70,7 @@ export default class Responses extends React.Component {
         className={` ${ResponseStyles.responseDetailContainer} core-container`}
       >
         <div className="content-container flex header-container">
-          <div className="half">
+          <div>
             <LocaleConsumer>
               {locale => {
                 let responseDetailText = this.getResponseDetailText(locale)

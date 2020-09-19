@@ -4,14 +4,25 @@
 
 .detailContainer {
   display: block;
-  padding-left: calc(var(--space) + var(--margin));
   padding-bottom: 350px;
+}
+
+.pieceDetailContentContainer {
+  background-image: linear-gradient(
+    var(--white) 0%,
+    var(--lightBlue) 30%,
+    var(--blue) 100%
+  );
 }
 
 .header {
   text-align: left;
   font-size: 24px;
-  padding-bottom: 24px;
+  margin: var(--margin);
+}
+
+.pieceDetailContent {
+  margin: var(--margin);
 }
 
 .subheader {
@@ -19,7 +30,7 @@
 }
 
 .images {
-  margin-top: var(--space);
+  margin-top: var(--margin);
   margin: 0 auto;
   padding-bottom: 96px;
 }
@@ -27,8 +38,8 @@
 .audio {
   width: 60%;
   height: 48px;
-  margin-bottom: var(--space);
-  margin-top: var(--space);
+  margin-bottom: var(--magin);
+  margin-top: var(--margin);
 }
 
 .translation {
@@ -36,10 +47,10 @@
 }
 
 .image {
-  margin-bottom: var(--space);
+  margin-bottom: var(--margin);
 }
 
-@media only screen and (min-width: 1080px) {
+@media only screen and (min-width: 800px) {
   .pieceDetailContent {
     display: flex;
     flex-direction: row;
@@ -48,7 +59,7 @@
   }
 
   .translation {
-    flex-basis: 33rem;
+    flex-basis: 24rem;
     flex-grow: 1;
     margin-right: var(--space);
   }

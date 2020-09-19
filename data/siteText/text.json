@@ -1,65 +1,67 @@
 {
   "en": {
     "home": [
-      "José Miguel Galán Najarro is a rapper and poet. Here, you can explore his writings, music, and works. We encourage you to respond, comment, create dialogue around his work, and suggest new themes or ideas for José Miguel to write about. ",
-      "José Miguel is currently detained at Adelanto ICE Processing Center in Adelanto, California (which most people just call “Adelanto”). Due to the facility’s restrictions on communication, our correspondence with José Miguel is limited to USPS mail and restricted phone calls.",
-      "All work shown here is received via mail or phone; we share our community’s responses with José Miguel in batches. We will send the next set of responses to José Miguel on October 1st, 2020.",
-      "From Jose:  ¿Hola cómo están? My name is José Miguel / And my last name is Galán / It’s a pleasure to meet you / Thank you for this opportunity / That you’re giving me / To showcase / My talent / My rhymes come to me / But if I don’t practice they’ll be gone to me / But new ones are born / I rhyme about everything In this crazy life",
-      "Since I was a little kid / I started writing / My own songs / When I was in jail / I asked myself / How these bad impulses / Came to control me / I’m from El Salvador / I live in California / I’ve spent half my life / Behind bars",
-      " I’ll stay positive / Non stop / I love music / But I prefer rap / I do my own thing / I do what I have to / To come out on top"
+      "José Miguel Galán Najarro is a rapper and poet. Here, you can explore his writings, music, and works. We also encourage you to respond, comment and create dialogue around his work. José Miguel is currently detained at Adelanto ICE Processing Center in Adelanto, California. All work shown here is received via mail or phone. Community’s responses are sent in batches, with the next batch scheduled for October 1st. "
     ],
+    "introTitle": "Excerpt from José Miguel's",
+    "introTitleLink": "(introduction)",
+    "introExcerpt": "./introexcerpt_en.md",
     "addResponse": {
       "intro": [
-        "We encourage visitors who visit this website, to respond to José Miguel’s work. They will also be sent, via mail or read via phone to José Miguel sometime after October 1st, 2020.  If you want to send him something other than a written response, or want access to his audio files, please email us at virtualcarelab@gmail.com. ",
-        "Please note that all responses are publicly visible to all people who visit this website.You can email us if you want your response removed. Finally, we may remove responses if we don’t feel they are written with positive intentions. "
+        "Please share your responses to José Miguel’s work! We share responses with José Miguel via mail or phone. If you would like to send something other than a written response, or would like access to additional audio files, please email virtualcarelab@gmail.com. ",
+        "Please note that all responses are publicly visible on this website. You can email us if you would like your response removed. Finally, we may choose to remove responses if we don’t feel they are written with positive intentions. "
       ],
       "authorPlaceholder": "who are you",
       "responsePlaceholder": "what would you like to say",
       "locationPlaceholder": "(optional) where are you?",
       "timePlaceholder": "(optional) when are you?",
       "respondingTo": "responding to..",
-      "submitResponse": "Submit response",
-      "error": "Please add at least an author and response"
+      "submitResponse": "Send response",
+      "error": "Please add at least an author and response before sending"
     },
     "learnMore": "./learnMore_en.md",
     "responseDetail": [
-      "These are all the responses written by the community to José Miguel. We encourage you to add your own response and be part of this dialogue of care. "
+      "We hope to generate a creative, positive dialogue around José Miguel’s work and welcome you to participate."
     ],
     "buttons": {
-      "addResponse": "respond to José Miguel",
+      "addResponse": "Respond to José Miguel",
       "closeAddAResponse": "close",
-      "seeResponse": "community responses",
+      "seeResponse": "Community responses",
       "seeHome": "./logo_2.png",
-      "seeAbout": "learn more",
+      "seeAbout": "Learn more",
       "seeLang": "Traducir al español"
     }
   },
   "es": {
     "home": [
-      "[ES] Introduction to Jose in spanish",
-      "More about Jose in spanish!"
+      "José Miguel Galán Najarro es un rapero y poeta. Aquí puede explorar sus escritos y letras, su música y sus obras. Te invitamos a dejar comentarios y crear dialogo sobre esta obra, y también sugerir nuevas ideas sobre que José Miguel puede escribir. José Miguel está detenido en el Centro de Procesamiento de ICE en Adelanto, California. Recibimos todas las obras que muestran aquí por el correo o teléfono, y envíamos a José Miguel las respuestas de nuestra comunidad en lotes. Enviamos el próximo grupo de respuestas en 1 del octubre del 2020."
     ],
+    "introTitle": "Extracto de José Miguel",
+    "introTitleLink": "(introdućion)",
+    "introExcerpt": "./introexcerpt_es.md",
     "addResponse": {
       "intro": [
-        "[ES] We encourage visitors who visit this website, to respond to Jose's work. All responses are publically visible to website visitors. They will also be sent, via mail or read via phone to Jose. We expect to send the next set of responses to Jose on August 18th, 2020.",
-        "[ES] If you wish to engage with Jose using audio, you can email us an audio file at bhaviksingh@gmail.com. You can also email us to request audio of Jose's rapping, if you want to add beats on it"
+        "¡Comparte tus respuestas hacia el trabajo de José Miguel! Compartiremos tus respuestas con José Miguel por teléfono o por correo. Si quieres enviar algo más allá de una respuesta escrita, o te gustaría tener acceso a archivos de audio adicionales, por favor envía un correo electrónico a virtualcarelab@gmail.com. ",
+        "Todas las respuestas son visibles públicamente en esta página web. Si quieres que tu respuesta sea eliminada, puedes enviarnos un correo electrónico. Adicionalmente, nos reservamos el derecho de eliminar respuestas que, de acuerdo a nuestro criterio, no estén escritas con intención positiva. "
       ],
-      "authorPlaceholder": "[ES] who are you",
-      "responsePlaceholder": "[ES] what would you like to say",
-      "locationPlaceholder": "[ES] (optional) where are you?",
+      "authorPlaceholder": "¿cómo te llamas?",
+      "responsePlaceholder": "¿qué quieres decir?",
+      "locationPlaceholder": "(opcional) ¿dónde estás?",
       "timePlaceholder": "[ES] (optional) when are you?",
-      "respondingTo": "responding to..",
-      "submitResponse": "Submit response",
-      "error": "Please add at least an author and response"
+      "respondingTo": "Respondo a…",
+      "submitResponse": "Enviar",
+      "error": "Incluir su nombre y respuesta antes de enviar"
     },
-    "learnMore": "./learnMore_en.md",
-    "responseDetail": ["[ES] Something about responses here.."],
+    "learnMore": "./learnMore_es.md",
+    "responseDetail": [
+      "Nuestra meta es crear un diálogo positivo sobre las obras de José Miguel, y te invitamos a participar. "
+    ],
     "buttons": {
-      "addResponse": "responder a José Miguel",
-      "closeAddAResponse": "cerca",
-      "seeResponse": "respuestas",
+      "addResponse": "Dejar respuesta",
+      "closeAddAResponse": "Cerca",
+      "seeResponse": "Ver respuestas",
       "seeHome": "./logo_2.png",
-      "seeAbout": "acerca de",
+      "seeAbout": "Aprende más",
       "seeLang": "Translate to english"
     }
   }

@@ -5,6 +5,16 @@
   height: 100%;
 }
 
+.addResponseHeader {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.addResponseHeader.content-container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .addResponseText {
   margin-bottom: var(--margin);
   padding: 0;

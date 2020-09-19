@@ -21,7 +21,7 @@ export default function CoreLayout({ children, path, pageContext }) {
     } else if (path.includes("about")) {
       return "red-gradient"
     } else {
-      return "blue-gradient"
+      return ""
     }
   }
   return (
