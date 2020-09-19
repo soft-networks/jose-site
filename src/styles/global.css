@@ -169,7 +169,9 @@ body,
   margin: var(--margin);
   flex: 1;
   display: inline;
-  min-width: 200px;
+  flex-basis: 200px;
+  flex-grow: 0;
+  flex-shrink: 1;
   font-style: italic;
   margin-top: calc(0.5 * var(--margin));
 }
