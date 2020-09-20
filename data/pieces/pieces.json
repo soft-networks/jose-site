@@ -1,16 +1,5 @@
 [
   {
-    "sectionBreak": "intro"
-  },
-  {
-    "name": "(introduction)",
-    "slug": "/intro/",
-    "images": ["./pieceData/intro/1.png", "./pieceData/intro/2.png"],
-    "date": "August 24th, 2020",
-    "translation": "./pieceData/intro/translation.md",
-    "thumb": "./pieceData/intro/thumb.png"
-  },
-  {
     "name": "José Miguel Galán",
     "slug": "/jose/",
     "images": [
@@ -21,6 +10,14 @@
     ],
     "translation": "./pieceData/jose/translation.md",
     "thumb": "./pieceData/jose/thumb.png"
+  },
+  {
+    "name": "(introduction)",
+    "slug": "/intro/",
+    "images": ["./pieceData/intro/1.png", "./pieceData/intro/2.png"],
+    "date": "August 24th, 2020",
+    "translation": "./pieceData/intro/translation.md",
+    "thumb": "./pieceData/intro/thumb.png"
   },
   {
     "name": "(the family you were looking for)",
@@ -42,9 +39,6 @@
     "translation": "./pieceData/warrior-of-life/translation.md",
     "thumb": "./pieceData/warrior-of-life/thumb.png",
     "audio": "./pieceData/warrior-of-life/audio.mp3"
-  },
-  {
-    "sectionBreak": "incarceration"
   },
   {
     "name": "(another day that will fly by like any other)",
@@ -101,9 +95,6 @@
     "thumb": "./pieceData/coronavirus/thumb.png"
   },
   {
-    "sectionBreak": "love"
-  },
-  {
     "name": "(another day gone)",
     "slug": "/another-day/",
     "images": [
@@ -140,9 +131,6 @@
     ],
     "translation": "./pieceData/hello-my-love/translation.md",
     "thumb": "./pieceData/hello-my-love/thumb.png"
-  },
-  {
-    "sectionBreak": "decisions we make"
   },
   {
     "name": "(what up loko)",

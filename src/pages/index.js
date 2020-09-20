@@ -3,11 +3,28 @@ import AllPiecePreview from "../components/pieces/allPiecePreview"
 import { graphql } from "gatsby"
 import { LocaleConsumer } from "../layouts/coreLayout"
 import LinkedElement from "../components/linkedElement"
+import PiecePreview from "../components/pieces/piecePreview"
 
 export default function Home({ data }) {
   //const homeContent = data.home
 
   const homeData = data.allSiteTextJson.edges[0].node
+
+  function getJosePhoto() {
+    const node = data.allPiecesJson.edges[0].node
+    console.log(node)
+    return (
+      <PiecePreview
+        pieceName={node.name}
+        pieceUrl={node.slug}
+        pieceImageUrl={node.thumb ? node.thumb.publicURL : undefined}
+        pieceImageData={
+          node.thumb ? node.thumb.childImageSharp.fluid : undefined
+        }
+        className="piece-preview full"
+      ></PiecePreview>
+    )
+  }
 
   function getHomeText(locale) {
     if (!locale) {
@@ -15,7 +32,9 @@ export default function Home({ data }) {
     }
     const homeDataInLocale = homeData[locale].home
     return homeDataInLocale.map((paragraph, index) => (
-      <div key={index}> {paragraph} </div>
+      <div key={index} className="full">
+        {paragraph}
+      </div>
     ))
   }
 
@@ -23,9 +42,9 @@ export default function Home({ data }) {
     const introTitleInLocale = homeData[locale].introTitle
     const introTitleLinkInLocale = homeData[locale].introTitleLink
     return (
-      <div>
+      <div className="intro-title">
         {introTitleInLocale}{" "}
-        <LinkedElement to="/intro">{introTitleLinkInLocale}</LinkedElement>:
+        <LinkedElement to="/intro">{introTitleLinkInLocale}</LinkedElement>
       </div>
     )
   }
@@ -35,11 +54,19 @@ export default function Home({ data }) {
     const introExcerptHTML = introExcerptInLocale.childMarkdownRemark.html
     return (
       <div
-        className="content-container flex intro"
+        className="intro-excerpt"
         dangerouslySetInnerHTML={{ __html: introExcerptHTML }}
       />
     )
-    return "nothing"
+  }
+
+  function getIntro(locale) {
+    return (
+      <div className="intro full">
+        {getIntroExcerpt(locale)}
+        {getIntroTitle(locale)}
+      </div>
+    )
   }
 
   return (
@@ -47,26 +74,37 @@ export default function Home({ data }) {
       <LocaleConsumer>
         {locale => {
           return (
-            <div>
-              <div className="content-container  header-container">
-                {getHomeText(locale)}
-              </div>
-              <div className="content-container header-container title">
-                {getIntroTitle(locale)}
-              </div>
-              {getIntroExcerpt(locale)}
+            <div id="home-info-container" className="content-container flex">
+              {getJosePhoto()}
+              {getIntro(locale)}
+              {getHomeText(locale)}
             </div>
           )
         }}
       </LocaleConsumer>
-
-      <AllPiecePreview></AllPiecePreview>
+      <AllPiecePreview id="home-preview-container"></AllPiecePreview>
     </div>
   )
 }
 
 export const query = graphql`
   query {
+    allPiecesJson(filter: { slug: { eq: "/jose/" } }) {
+      edges {
+        node {
+          id
+          name
+          slug
+          thumb {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid_noBase64
+              }
+            }
+          }
+        }
+      }
+    }
     allSiteTextJson {
       edges {
         node {

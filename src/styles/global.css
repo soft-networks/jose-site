@@ -16,7 +16,7 @@ body,
 
 :root {
   --blue: rgb(64, 175, 255);
-  --lightBlue: rgb(123, 199, 253);
+  --lightBlue: rgb(81, 183, 255);
   --yellow: rgb(255, 255, 90);
   --red: rgb(255, 190, 190);
   --lightYellow: rgb(255, 255, 200);
@@ -33,12 +33,9 @@ body,
   overflow-x: hidden;
 }
 
-.blue-gradient {
-  background: linear-gradient(
-    var(--white) 25%,
-    var(--blue) 60%,
-    var(--blue) 100%
-  );
+.home-gradient {
+  background: var(--lightBlue);
+  padding-bottom: 96px;
 }
 
 .yellow-gradient {
@@ -113,12 +110,11 @@ body,
 }
 
 .content-container.flex .full {
-  width: 100%;
-  min-width: 100%;
-  max-width: 100%;
+  width: calc(100% - var(--margin));
+  min-width: calc(100% - var(--margin));
+  max-width: calc(100% - var(--margin));
   flex: 1;
-  margin-left: 8px;
-  display: none;
+  margin: var(--margin);
 }
 
 .content-container.header-container {
@@ -158,34 +154,48 @@ body,
 
 /* Styles specific to index  */
 
-#home-container .content-container.intro {
-  width: 100%;
-  display: inline-flex;
+#home-container {
+  display: flex;
   flex-direction: row;
   background-image: linear-gradient(var(--white) 0%, var(--lightBlue) 100%);
 }
 
-#home-container .content-container.intro p {
-  margin: var(--margin);
+#home-container #home-info-container {
   flex: 1;
-  display: inline;
-  flex-basis: 200px;
-  flex-grow: 0;
-  flex-shrink: 1;
-  font-style: italic;
-  margin-top: calc(0.5 * var(--margin));
+  word-break: break-word;
 }
 
-#home-container .content-container.title {
-  margin-top: var(--space);
-  margin-bottom: 0;
-}
-
-#home-container #preview-container {
+#home-container #home-preview-container {
   flex-direction: row;
   width: 100%;
   flex-wrap: wrap;
-  background-image: linear-gradient(var(--lightBlue) 0%, var(--blue) 100%);
+  flex: 2;
+}
+
+#home-container #home-info-container .intro {
+  width: 100%;
+  margin-top: var(--margin);
+}
+
+#home-container #home-info-container .intro .intro-excerpt {
+  font-family: "josefin sans", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.4em;
+  text-shadow: 0px 0px 8px var(--yellow);
+}
+
+#home-info-container .piece-preview .preview-content {
+  text-align: left;
+}
+
+#home-container #home-info-container .intro .intro-title {
+  margin-top: 4px;
+}
+
+#home-container #home-info-container .intro .intro-excerpt p {
+  margin: 0;
+  margin-top: var(--margin);
 }
 
 a,
@@ -223,6 +233,10 @@ a:visited {
   z-index: 5;
 }
 
+.home-gradient .navBanner {
+  background: white;
+}
+
 .navBannerContentContainer {
   display: flex;
   flex-direction: row;
@@ -230,8 +244,9 @@ a:visited {
 
 .button {
   cursor: pointer;
-  font-family: "Josefin Sans";
+  font-family: "josefin sans", sans-serif;
   font-weight: 500;
+
   font-size: 14px;
 }
 
@@ -249,12 +264,12 @@ a:visited {
 
 .navBanner .button.responses:hover,
 .navBanner .activeButton.responses {
-  color: rgb(224, 198, 63);
+  color: rgb(245, 196, 63);
 }
 
 .navBanner .button.about:hover,
 .navBanner .activeButton.about {
-  color: var(--red);
+  color: rgb(255, 38, 38);
 }
 
 .navBanner .button img {
@@ -268,7 +283,7 @@ a:visited {
 @media only screen and (min-width: 1080px) {
   :root {
     --space: 24px;
-    --width: calc(33% - var(--space));
+    --width: calc(50% - var(--space));
     --margin: calc(0.5 * var(--space));
   }
   .primary-container {
@@ -289,7 +304,7 @@ a:visited {
   }
 
   :root {
-    --space: 24px;
+    --space: 18px;
     --width: calc(100% - var(--space));
     --margin: calc(0.5 * var(--space));
   }
@@ -303,6 +318,9 @@ a:visited {
     flex-wrap: wrap;
   }
 
+  #home-container {
+    flex-direction: column;
+  }
   #jose-logo {
     flex-basis: 100%;
     margin-bottom: 0px;
@@ -310,5 +328,19 @@ a:visited {
 
   #about-container .content-container {
     column-count: 1;
+  }
+
+  #home-container #home-info-container {
+    padding-top: var(--space);
+  }
+  #home-container #home-info-container .intro .intro-excerpt {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  #home-container #home-info-container .intro .intro-excerpt p {
+    display: inline-flex;
+    flex-basis: 49%;
+    width: 49%;
   }
 }

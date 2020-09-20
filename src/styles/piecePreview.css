@@ -4,21 +4,28 @@
   position: relative;
 }
 
+.piece-preview:last-child {
+  padding-bottom: 96px;
+}
+
 .piece-preview .preview-content {
   position: relative;
   text-align: center;
+
   /* animation: shrink 1s forwards; */
+}
+
+#home-preview-container .piece-preview .preview-content {
+  -webkit-transition: width 1s, transform 1s, padding 1s;
+  transition: width 1s, transform 1s, padding 1s;
+  transition-timing-function: ease;
   --animGrowth: 12px;
   width: 100%;
   transform: translate(0px, 0px);
   padding: calc(var(--animGrowth) / 4);
-
-  -webkit-transition: width 1s, transform 1s, padding 1s;
-  transition: width 1s, transform 1s, padding 1s;
-  transition-timing-function: ease;
 }
 
-.piece-preview:hover .preview-content {
+#home-preview-container .piece-preview:hover .preview-content {
   width: calc(100% + var(--animGrowth));
   transform: translate(
     calc(-0.5 * var(--animGrowth)),

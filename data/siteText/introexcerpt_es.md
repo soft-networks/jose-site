@@ -1,45 +1,23 @@
-<p>
-"¿Hola cómo están?
-<br />
-mi nombre es
-<br />
-José Miguel
-<br />
-mi apellido es Galan
-</p>
-<p>
-gracias  es un gusto
-<br />
-por la oportunidad
-<br />
-que uste de samime dan
-</p>
-<p>
-de el poder mostrar mi talento
-<br />
-las rimas me vienen
-<br />
-aunque sin practicar
-<br />
+"¿Hola cómo están?  
+mi nombre es  
+José Miguel  
+mi apellido es Galan  
+gracias es un gusto  
+por la oportunidad  
+que uste de samime dan  
+de el poder mostrar mi talento  
+las rimas me vienen  
+aunque sin practicar  
 aveces se van"
-</p>
-<p>
-"yo soy de El Salvador
-<br />
-vivo en California
-<br />
-medio tiempo de mivida
-<br />
-la e pasado perso"
-</p>
-<p>
-"seguire positivo <br />
-sin ningun stop <br />
-me gusta la musica <br />
-pero mejor el rap <br />
-</p>
-<p>
-yo ago lo mio <br />
-lo necesario <br />
+
+"yo soy de El Salvador  
+vivo en California  
+medio tiempo de mivida  
+la e pasado perso"  
+"seguire positivo  
+sin ningun stop  
+me gusta la musica  
+pero mejor el rap  
+yo ago lo mio  
+lo necesario  
 para poder triunfar"
-</p>

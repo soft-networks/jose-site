@@ -19,7 +19,7 @@ export default function PiecePreview(props) {
   }
 
   return (
-    <div className="piece-preview half">
+    <div className={props.className}>
       <div className="preview-content">
         {renderImageIfExists()}
         <LinkedElement className="name" to={props.pieceUrl}>

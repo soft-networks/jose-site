@@ -20,8 +20,8 @@ export default function CoreLayout({ children, path, pageContext }) {
       return "yellow-gradient"
     } else if (path.includes("about")) {
       return "red-gradient"
-    } else {
-      return ""
+    } else if (originalPath === "/") {
+      return "home-gradient"
     }
   }
   return (
