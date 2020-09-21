@@ -7,13 +7,13 @@
   padding-bottom: 350px;
 }
 
-.pieceDetailContentContainer {
+/* .pieceDetailContentContainer {
   background-image: linear-gradient(
     var(--white) 0%,
     var(--lightBlue) 30%,
     var(--blue) 100%
   );
-}
+} */
 
 .header {
   text-align: left;
@@ -46,7 +46,6 @@
   margin: 0 auto;
   font-family: "josefin sans", sans-serif;
   font-weight: 300;
-  font-style: italic;
 }
 
 .image {

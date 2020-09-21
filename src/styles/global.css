@@ -38,6 +38,14 @@ body,
   padding-bottom: 96px;
 }
 
+.blue-gradient {
+  background: linear-gradient(
+    var(--white) 10%,
+    var(--lightBlue) 80%,
+    var(--blue) 100%
+  );
+}
+
 .yellow-gradient {
   background: linear-gradient(
     var(--white) 8%,
@@ -142,6 +150,7 @@ body,
 }
 #about-container .content-container p:first-child {
   text-indent: 0px;
+  margin-top: 0px;
 }
 
 .content-container.flex .half {
@@ -157,19 +166,23 @@ body,
 #home-container {
   display: flex;
   flex-direction: row;
-  background-image: linear-gradient(var(--white) 0%, var(--lightBlue) 100%);
 }
 
 #home-container #home-info-container {
   flex: 1;
   word-break: break-word;
+  display: block;
+}
+
+#home-container #home-info-container .full {
+  padding-top: var(--space);
 }
 
 #home-container #home-preview-container {
   flex-direction: row;
   width: 100%;
   flex-wrap: wrap;
-  flex: 2;
+  flex: 3;
 }
 
 #home-container #home-info-container .intro {
@@ -180,7 +193,6 @@ body,
 #home-container #home-info-container .intro .intro-excerpt {
   font-family: "josefin sans", sans-serif;
   font-weight: 300;
-  font-style: italic;
   line-height: 1.4em;
   text-shadow: 0px 0px 8px var(--yellow);
 }
@@ -330,9 +342,6 @@ a:visited {
     column-count: 1;
   }
 
-  #home-container #home-info-container {
-    padding-top: var(--space);
-  }
   #home-container #home-info-container .intro .intro-excerpt {
     flex-direction: row;
     flex-wrap: wrap;
@@ -342,5 +351,7 @@ a:visited {
     display: inline-flex;
     flex-basis: 49%;
     width: 49%;
+    font-size: 14px;
+    line-height: 1.6em;
   }
 }

@@ -82,7 +82,7 @@ export default function Home({ data }) {
           )
         }}
       </LocaleConsumer>
-      <AllPiecePreview id="home-preview-container"></AllPiecePreview>
+      <AllPiecePreview id="home-preview-container"> </AllPiecePreview>
     </div>
   )
 }
@@ -97,7 +97,7 @@ export const query = graphql`
           slug
           thumb {
             childImageSharp {
-              fluid {
+              fluid(grayscale: true) {
                 ...GatsbyImageSharpFluid_noBase64
               }
             }
