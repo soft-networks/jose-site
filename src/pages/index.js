@@ -12,7 +12,6 @@ export default function Home({ data }) {
 
   function getJosePhoto() {
     const node = data.allPiecesJson.edges[0].node
-    console.log(node)
     return (
       <PiecePreview
         pieceName={node.name}

@@ -6,7 +6,7 @@ Desde Marzo de 2020, las visitas familiares en Adelanto han sido suspendidas. Ad
 
 A lo largo de los años, algunos grupos de derechos humanos y derechos de discapacidad han descubierto que las condiciones desreguladas, letales e inhumanas en Adelanto persisten hasta el día de hoy, especialmente para reclusos con vulnerabilidad médica. A pesar de sufrir de una discapacidad mental severa, José Miguel ha sido encerrado en aislamiento multitud de veces en el pasado, la más reciente en junio de 2020, cuando los guardias de GEO atacaron a los reclusos que estaban protestando pacíficamente en contra del confinamiento y los bloqueos en la comunicación, y utilizaron sprays pimienta en su contra. Además de esto, José Miguel presenta un cuadro médico que lo haría particularmente vulnerable al COVID-19, y a pesar de estar en alto riesgo, no ha sido dejado en libertad.
 
-A poca distancia de Adelanto, en el Centro de Procesamiento de ICE de Mesa Verde, otra prisión para inmigrantes propiedad del Grupo GEO, más del 50% de prisioneros han dado positivo de COVID-19. Al mantener en activo los traslados entre prisiones y las detenciones, y ya que ICE y GEO continúan actuando con total y deliberada indiferencia, es tan sólo una cuestión de tiempo hasta que estas condiciones sean replicadas en Adelanto.
+Al mantener en activo los traslados entre prisiones y las detenciones, y ya que ICE y GEO continúan actuando con total y deliberada indiferencia. Al 18 de Septiembre de 2020, se tiene reportado un contagio masivo a COVID-19 en Adelanto, donde se han reportado mas de 50 casos, un numero que está creciendo rapidamente.
 
 Estas son las condiciones bajo las cuales José Miguel crea su arte, y a partir de las cuales este proyecto ha tomado forma.
 
@@ -16,23 +16,19 @@ Las canciones y poemas de José hablan de temas como el amor, las decisiones juv
 
 Mark Dow escribe en American Gulag: “para los reclusos, la diferencia entre adentro y afuera puede serlo todo… Un escritor que visita prisiones no está adentro. Pero entre más y más gente escuche y vea, a medida que nuestro propio archipiélago se convierta en algo cada vez más difícil de ignorar, comprenderemos que su adentro nos rodea por completo”.
 
-**Read more**
+¿Otras formas de apoyar? Mantente involucrado. Cuando sea seguro, visita una prisión migratoria con un defensor/a de migrantes. Conoce a las personas detenidas. Apoya a las personas en detención. Apoya los fondos de fianza. Deposita fondos en las cuentas de comisaría de los detenidos. Participa en programas de observación de corte. Comparte esta información con tu familia. Vota.
 
-- [ICE Makes It Almost Impossible for People to Make Phone Calls from Detention Centers, Even in a Pandemic](https://immigrationimpact.com/2020/08/27/ice-phone-calls/?emci=74f11c33-44e9-ea11-8b03-00155d0394bb&emdi=f13c0f2f-ccea-ea11-8b03-00155d0394bb&ceid=8885589#.X0klMn6Sk2w) (Immigration Impact)
-- [COVID-19 is increasingly dangerous for people held in jails and prisons](https://law.ucla.edu/academics/centers/criminal-justice-program/ucla-covid-19-behind-bars-data-project). (UCLA Law)
-- [Half of All Detainees at Bakersfield ICE Facility Have Tested Positive For COVID-19](https://www.kqed.org/news/11833925/half-of-all-detainees-at-bakersfield-ice-facility-have-tested-positive-for-covid-19) (KQED)
-- [Immigrants detained at Adelanto staged a peaceful protest. Guards in riot gear pepper-sprayed them](https://www.latimes.com/california/story/2020-06-26/immigrants-detained-at-adelanto-staged-a-peaceful-protest-guards-in-riot-gear-pepper-sprayed-them) (LA Times)
-
-Other ways to support? Stay engaged. When it is safe, visit an immigration prison with an immigration advocate. Meet with detainees. Be a lifeline to somebody in detention. Support bail funds. Deposit funds in detainees commissary accounts. Participate in court watch programs. Share with your family. Vote.
+The Inland Justice Coalition and Inland Empire Migrant Abolitionists son organizaciones increíbles de Inland Empire que organizan alrededor de justicia migratoria de las personas detenidas en Adelanto. Sugerimos que les donen a ellos, o a cualquier otra organización local que haga trabajo de justicia para los inmigrantes cerca de donde viven.Envíenos un correo electrónico si está buscando recomendaciones sobre organizaciones de justicia para inmigrantes en su área.
 
 **Who are we**
 
-This project was organized and built by [virtual care lab](https://virtualcarelab.com/about)
-Project leads: Daniela Hernández, Bhavik Singh
-Credit for works: José Miguel Galán Najarro
+Este proyecto fue creado y organizado por: [virtual care lab](https://virtualcarelab.com/about)  
+Cabeza del proyecto: Daniela Hernandez Chong Cuy, Bhavik Singh  
+Creditos: Jose Miguel Galán Najarro  
+Traducción: [Maria Elisa Gomez](https://www.instagram.com/mariaelisaaa___/), Alan Page Arriaga, Sara V. Suárez
 
-Daniela is an immigration attorney based in Los Angeles. She works in the intersection of immigration, mental health and the criminal legal system. She practices a model of holistic representation by building strong networks of collaboration with lawyers, social workers, mental health professionals, artists and oral historians.
+[Daniela](https://lawoffice-dhchongcuy.com/) es una abogada de migración basada en Los Angeles. Trabaja en la intersección de migración, salud mental y sistema penal. Ejerce una forma de representación integral - holística a través de la creación de redes de colaboración con otros abogados y abogadas, trabajadores sociales, profesionales en salud mental, artistas e historiadores orales.
 
-[virtual care lab](https://virtualcarelab.com/about) is an open creative community and project series that understands creative expression as a vital form of civic engagement contributing to a more equitable world. We create unconventional, welcoming ways to connect people through creative activities, thoughtful discussions, virtual gatherings, and other collaborative projects.
+[virtual care lab](https://virtualcarelab.com/about) una comunidad creativa abierta y una serie de proyectos que entienden la expresión creativa como una forma vital de compromiso cívico que contribuye a un mundo más equitativo. Creamos formas no convencionales de conectar a la gente a través de actividades creativas, discusiones reflexivas, reuniones virtuales y otros proyectos de colaboración.
 
-[Bhavik](bhaviksingh.com) is a designer and developer who creates software that helps humans and communities to express themselves in authentic, creative and new ways.
+[Bhavik](http://bhaviksingh.com) es un diseñador y desarrollador que crea software que ayuda a los humanos y a las comunidades a expresarse de manera auténtica, creativa e innovadora.
