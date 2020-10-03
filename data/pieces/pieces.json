@@ -9,7 +9,8 @@
       "./pieceData/jose/4.png"
     ],
     "translation": "./pieceData/jose/translation.md",
-    "thumb": "./pieceData/jose/thumb.png"
+    "thumb": "./pieceData/jose/thumb.png",
+    "audio": "./pieceData/jose/audio.mp3"
   },
   {
     "name": "(introduction)",

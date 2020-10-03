@@ -1,4 +1,4 @@
-_(the family you were looking for)_
+_(the family you were looking for)_  
 What’s up man  
 I see you Representing  
 Gaining respect  
@@ -35,7 +35,7 @@ Trying to make things happen
 Whom who seeks finds  
 The thing is, you gotta try
 
-_Chorus x 2_
+_Chorus x 2_  
 It’s like the family  
 That you were looking for  
 And you found

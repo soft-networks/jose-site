@@ -15,7 +15,7 @@ My rhymes come to me
 But if I don’t practice they’ll be gone to me  
 But new ones are born  
 I rhyme about everything In this crazy life  
-Nothing can humiliate me
+Nothing can humiliate me  
 Whatever comes  
 We had coming  
 Everybody gets  
