@@ -1,4 +1,65 @@
 [
+  {	
+    "sectionBreak": "October 4 - Nov 21"	
+  },
+  {
+    "name": "a message",
+    "slug": "/2-message/",
+    "images": [
+      "./pieceData/2-message/1.png"
+    ],
+    "response": "to everybody",
+    "translation": "./pieceData/2-message/translation.md",
+    "thumb": "./pieceData/2-message/thumb.png"
+  },
+  {
+    "name": "(healing, surviving and transformation)",
+    "slug": "/2-tojoanne/",
+    "images": [
+      "./pieceData/2-tojoanne/1.png",
+      "./pieceData/2-tojoanne/2.png"
+    ],
+    "response": "to Joanne",
+    "translation": "./pieceData/2-tojoanne/translation.md",
+    "thumb": "./pieceData/2-tojoanne/thumb.png"
+  },
+  {
+    "name": "(everything in life)",
+    "slug": "/2-stayingpositive/",
+    "images": [
+      "./pieceData/2-stayingpositive/1.png",
+      "./pieceData/2-stayingpositive/2.png",
+      "./pieceData/2-stayingpositive/3.png"
+    ],
+    "response": "to Bhavik, Kristy, Kate, Anna, Joanne, Gloria",
+    "translation": "./pieceData/2-stayingpositive/translation.md",
+    "thumb": "./pieceData/2-stayingpositive/thumb.png"
+  },
+  {
+    "name": "(life is hard)",
+    "slug": "/2-sahib/",
+    "images": [
+      "./pieceData/2-sahib/1.png",
+      "./pieceData/2-sahib/2.png"
+    ],
+    "response": "to Sahib",
+    "translation": "./pieceData/2-sahib/translation.md",
+    "thumb": "./pieceData/2-sahib/thumb.png"
+  },
+  
+  {
+    "name": "(respect)",
+    "slug": "/2-respect/",
+    "images": [
+      "./pieceData/2-respect/1.png",
+      "./pieceData/2-respect/2.png"
+    ],
+    "translation": "./pieceData/2-respect/translation.md",
+    "thumb": "./pieceData/2-respect/thumb.png"
+  },
+  {	
+    "sectionBreak": "before October 4"	
+  },
   {
     "name": "José Miguel Galán",
     "slug": "/jose/",

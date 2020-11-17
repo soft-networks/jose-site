@@ -125,6 +125,10 @@ body,
   margin: var(--margin);
 }
 
+.content-container.flex .piece-preview.full {
+  text-align: center;
+}
+
 .content-container.header-container {
   padding-top: 0px;
   max-width: 800px;
@@ -192,7 +196,6 @@ body,
 
 #home-container #home-info-container .intro .intro-excerpt {
   font-family: "josefin sans", sans-serif;
-  font-weight: 300;
   line-height: 1.4em;
   text-shadow: 0px 0px 8px var(--yellow);
 }
@@ -257,8 +260,6 @@ a:visited {
 .button {
   cursor: pointer;
   font-family: "josefin sans", sans-serif;
-  font-weight: 500;
-
   font-size: 14px;
 }
 

@@ -3,6 +3,15 @@ import Image from "gatsby-image"
 import LinkedElement from "../linkedElement"
 
 export default function PiecePreview(props) {
+  function renderResponseIfExists() {
+    if (props.response) {
+      return (
+        <div class="response-floaty">
+          {props.response}
+        </div>
+      )
+    }
+  }
   function renderImageIfExists() {
     if (props.pieceImageData) {
       return (
@@ -23,8 +32,9 @@ export default function PiecePreview(props) {
       <div className="preview-content">
         {renderImageIfExists()}
         <LinkedElement className="name" to={props.pieceUrl}>
-          {props.pieceName}
+          {props.pieceName}{renderResponseIfExists()}
         </LinkedElement>
+        
       </div>
     </div>
   )

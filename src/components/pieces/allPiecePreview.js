@@ -11,6 +11,8 @@ export default function AllPiecePreview({ id }) {
             id
             name
             slug
+            response
+            sectionBreak
             thumb {
               childImageSharp {
                 fluid(grayscale: true) {
@@ -45,6 +47,7 @@ export default function AllPiecePreview({ id }) {
           }
           key={index}
           className="piece-preview half"
+          response={node.response}
         ></PiecePreview>
       )
     }
