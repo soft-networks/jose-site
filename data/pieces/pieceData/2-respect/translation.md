@@ -2,7 +2,7 @@
 Listen people  
 I am gonna talk straight with you all
 
-_Chorus_
+_Chorus_  
 I don’t know if you understand  
 The value of respect  
 For me, to earn it  
@@ -44,7 +44,7 @@ Because I have earned it
 The advice I have for you  
 Is to be careful
 
-_Chorus x 2_
+_Chorus x 2_  
 I don’t know if you understand  
 The value of respect  
 For me, to earn it  

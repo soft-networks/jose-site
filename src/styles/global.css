@@ -178,10 +178,6 @@ body,
   display: block;
 }
 
-#home-container #home-info-container .full {
-  padding-top: var(--space);
-}
-
 #home-container #home-preview-container {
   flex-direction: row;
   width: 100%;
@@ -337,6 +333,12 @@ a:visited {
   #jose-logo {
     flex-basis: 100%;
     margin-bottom: 0px;
+  }
+
+  #home-container #home-info-container .full,
+  .content-container.flex .piece-preview.full {
+    text-align: center;
+    padding-top: var(--space);
   }
 
   #about-container .content-container {

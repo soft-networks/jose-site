@@ -34,7 +34,7 @@ export default function AllPiecePreview({ id }) {
         </div>
       )
     } else {
-      if (node.slug == "/jose/") {
+      if (node.slug === "/jose/") {
         return
       }
       return (

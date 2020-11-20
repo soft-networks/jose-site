@@ -13,6 +13,27 @@
     "thumb": "./pieceData/2-message/thumb.png"
   },
   {
+    "name": "(i am not a rapper)",
+    "slug": "/2-notarapper/",
+    "images": [
+      "./pieceData/2-notarapper/1.png"
+    ],
+    "response": "with music by Kenny",
+    "translation": "./pieceData/2-notarapper/translation.md",
+    "thumb": "./pieceData/2-notarapper/thumb.png",
+    "audio": "./pieceData/2-notarapper/audio.mp3"
+  },
+  {
+    "name": "(standing in the corner)",
+    "slug": "/2-corner/",
+    "images": [
+      "./pieceData/2-corner/1.png"
+    ],
+    "translation": "./pieceData/2-corner/translation.md",
+    "thumb": "./pieceData/2-corner/thumb.png",
+    "audio": "./pieceData/2-corner/audio.mp3"
+  },
+  {
     "name": "(healing, surviving and transformation)",
     "slug": "/2-tojoanne/",
     "images": [
@@ -22,6 +43,16 @@
     "response": "to Joanne",
     "translation": "./pieceData/2-tojoanne/translation.md",
     "thumb": "./pieceData/2-tojoanne/thumb.png"
+  },
+  {
+    "name": "(this is no joke)",
+    "slug": "/2-nojoke/",
+    "images": [
+      "./pieceData/2-nojoke/1.png"
+    ],
+    "translation": "./pieceData/2-nojoke/translation.md",
+    "thumb": "./pieceData/2-nojoke/thumb.png",
+    "audio": "./pieceData/2-nojoke/audio.mp3"
   },
   {
     "name": "(everything in life)",
@@ -46,7 +77,28 @@
     "translation": "./pieceData/2-sahib/translation.md",
     "thumb": "./pieceData/2-sahib/thumb.png"
   },
-  
+  {
+    "name": "(a dream come true)",
+    "slug": "/2-adream/",
+    "images": [
+      "./pieceData/2-adream/1.png",
+      "./pieceData/2-adream/2.png"
+    ],
+    "response": "to the Virtual Care Lab community",
+    "translation": "./pieceData/2-adream/translation.md",
+    "thumb": "./pieceData/2-adream/thumb.png"
+  },
+  {
+    "name": "(how life is)",
+    "slug": "/2-howlifeis/",
+    "images": [
+      "./pieceData/2-howlifeis/1.png",
+      "./pieceData/2-howlifeis/2.png"
+    ],
+    "response": "to Bhavik",
+    "translation": "./pieceData/2-howlifeis/translation.md",
+    "thumb": "./pieceData/2-howlifeis/thumb.png"
+  },
   {
     "name": "(respect)",
     "slug": "/2-respect/",
@@ -56,6 +108,36 @@
     ],
     "translation": "./pieceData/2-respect/translation.md",
     "thumb": "./pieceData/2-respect/thumb.png"
+  },
+  {
+    "name": "(barely friday)",
+    "slug": "/2-barelyfriday/",
+    "images": [
+      "./pieceData/2-barelyfriday/1.png",
+      "./pieceData/2-barelyfriday/2.png"
+    ],
+    "translation": "./pieceData/2-barelyfriday/translation.md",
+    "thumb": "./pieceData/2-barelyfriday/thumb.png"
+  },
+  {
+    "name": "(you are my medecine)",
+    "slug": "/2-medecine/",
+    "images": [
+      "./pieceData/2-medecine/1.png",
+      "./pieceData/2-medecine/2.png"
+    ],
+    "translation": "./pieceData/2-medecine/translation.md",
+    "thumb": "./pieceData/2-medecine/thumb.png"
+  },
+  {
+    "name": "untitled love song",
+    "slug": "/2-unknown/",
+    "images": [
+      "./pieceData/2-unknown/1.png",
+      "./pieceData/2-unknown/2.png"
+    ],
+    "translation": "./pieceData/2-unknown/translation.md",
+    "thumb": "./pieceData/2-unknown/thumb.png"
   },
   {	
     "sectionBreak": "before October 4"	

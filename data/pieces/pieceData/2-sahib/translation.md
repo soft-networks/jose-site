@@ -3,7 +3,7 @@ Life is hard
 When there is no way out of this  
 And you love your family
 
-_Chorus x 2_
+_Chorus x 2_  
 My heart is bleeding  
 By seeing that I am  
 Losing their love  
@@ -40,7 +40,7 @@ With water up to our necks
 With a hurtful heart  
 Sometimes with no reason
 
-_Chorus x 2_
+_Chorus x 2_  
 My heart is bleeding  
 By seeing that I am  
 Losing their love  

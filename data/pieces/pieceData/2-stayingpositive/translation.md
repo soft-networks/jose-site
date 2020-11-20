@@ -1,5 +1,5 @@
 **(everything in life)**  
-_Chorus_
+_Chorus_  
 Everything in life  
 Happens for a reason  
 Sometimes bad decisions  
@@ -38,7 +38,7 @@ Transforming into human
 Or into good beings  
 Stop acting like fools
 
-_Chorus_
+_Chorus_  
 Everything in life  
 Happens for a reason  
 Sometimes bad decisions  

@@ -6,9 +6,9 @@ export default function PiecePreview(props) {
   function renderResponseIfExists() {
     if (props.response) {
       return (
-        <div class="response-floaty">
-          {props.response}
-        </div>
+        <span class="response-floaty">
+          <br/>{props.response}
+        </span>
       )
     }
   }

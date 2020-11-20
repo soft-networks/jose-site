@@ -27,11 +27,6 @@ export default function PieceDetail(props) {
     }
   }
 
-  function renderTimeIfExists() {
-    if (props.date) {
-      return <div className={detailStyles.subheader}> {props.date} </div>
-    }
-  }
 
   function renderAudioIfExists() {
     if (props.audioURL) {
@@ -56,8 +51,6 @@ export default function PieceDetail(props) {
         className={`${detailStyles.pieceDetailContentContainer} content-container`}
       >
         <div className={detailStyles.header}>
-          <div> {props.pieceName}</div>
-          {renderTimeIfExists()}
           {renderAudioIfExists()}
         </div>
         <div className={detailStyles.pieceDetailContent}>
